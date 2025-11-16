@@ -1,5 +1,5 @@
 import React from 'react'
-import storyImage from '../assets/images/story.jpg'
+import storyImage from '../assets/images/1.jpg'
 
 function Story () {
   return (

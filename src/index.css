@@ -2697,7 +2697,7 @@ body.slide .oliven-nav-toggle {
   .wedding-dates {
     font-size: 14px;
   }
-}/* Fix Music Control Button Position */
+}/* Fix Music Control Button for Mobile */
 .music-control {
   position: fixed;
   bottom: 30px;
@@ -2717,6 +2717,10 @@ body.slide .oliven-nav-toggle {
   align-items: center;
   justify-content: center;
   overflow: visible;
+  -webkit-tap-highlight-color: transparent; /* ADDED: Remove tap highlight on mobile */
+  touch-action: manipulation; /* ADDED: Improve touch response */
+  user-select: none; /* ADDED: Prevent text selection */
+  -webkit-user-select: none;
 }
 
 .music-control:hover {
@@ -2732,23 +2736,24 @@ body.slide .oliven-nav-toggle {
   background: linear-gradient(135deg, #888, #666);
 }
 
-/* Make ALL icons visible */
+/* Make ALL icons visible and touchable */
 .music-control i {
   position: relative;
   z-index: 10;
   color: #fff !important;
-  font-size: 26px !important; /* Force size */
-  display: block !important; /* Force display */
+  font-size: 26px !important;
+  display: block !important;
   line-height: 1;
+  pointer-events: none; /* ADDED: Let clicks pass through to button */
 }
 
 /* Specific fix for play icon visibility */
 .music-control.paused i.fa-play {
   font-size: 28px !important;
-  padding-left: 4px; /* Visual centering for play triangle */
+  padding-left: 4px;
 }
 
-/* Animated Music Waves - HIDDEN BY DEFAULT */
+/* Animated Music Waves */
 .music-waves {
   position: absolute;
   top: 50%;
@@ -2759,9 +2764,9 @@ body.slide .oliven-nav-toggle {
   align-items: flex-end;
   height: 20px;
   z-index: 5;
+  pointer-events: none; /* ADDED: Let clicks pass through */
 }
 
-/* Show waves only when playing */
 .music-control.playing .music-waves {
   display: flex;
 }
@@ -2771,6 +2776,7 @@ body.slide .oliven-nav-toggle {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   animation: wave-animation 0.8s ease-in-out infinite;
+  pointer-events: none; /* ADDED */
 }
 
 .wave-1 {
@@ -2810,6 +2816,7 @@ body.slide .oliven-nav-toggle {
   background: rgba(189, 148, 90, 0.3);
   animation: ripple 2s infinite;
   z-index: 1;
+  pointer-events: none; /* ADDED */
 }
 
 @keyframes ripple {
@@ -2826,11 +2833,32 @@ body.slide .oliven-nav-toggle {
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
   .music-control {
-    width: 55px;
-    height: 55px;
+    width: 60px; /* CHANGED: Slightly larger for easier tapping */
+    height: 60px;
     font-size: 22px;
     bottom: 20px;
     right: 20px;
+    /* Ensure button is always tappable */
+    min-width: 44px; /* iOS minimum tap target */
+    min-height: 44px;
+  }
+  
+  .music-control i {
+    font-size: 24px !important; /* CHANGED: Larger on mobile */
+  }
+  
+  .music-control.paused i.fa-play {
+    font-size: 26px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .music-control {
+    width: 55px;
+    height: 55px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 15px;
   }
   
   .music-control i {
@@ -2839,23 +2867,5 @@ body.slide .oliven-nav-toggle {
   
   .music-control.paused i.fa-play {
     font-size: 24px !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .music-control {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    bottom: 20px;
-    right: 15px;
-  }
-  
-  .music-control i {
-    font-size: 20px !important;
-  }
-  
-  .music-control.paused i.fa-play {
-    font-size: 22px !important;
   }
 }
