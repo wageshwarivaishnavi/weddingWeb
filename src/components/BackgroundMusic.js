@@ -4,6 +4,7 @@ import weddingSong from '../assets/images/Mella-Sirithai.mp3';
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
+  const autoplayAttemptedRef = useRef(false); // Track if we've tried autoplay
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -13,23 +14,32 @@ const BackgroundMusic = () => {
 
     // Try autoplay
     const tryAutoplay = () => {
+      if (autoplayAttemptedRef.current) return; // Don't try multiple times
+      autoplayAttemptedRef.current = true;
+
       audio.play()
         .then(() => {
           setIsPlaying(true);
           console.log('Playing');
         })
         .catch(() => {
-          console.log('Autoplay blocked, click anywhere to play');
+          console.log('Autoplay blocked, waiting for user interaction');
           
-          // Play on first click
+          // Play on first interaction (click, touch, OR scroll)
           const playOnce = () => {
             audio.play()
               .then(() => setIsPlaying(true))
               .catch(err => console.log(err));
+            
+            // Remove all listeners
             document.removeEventListener('click', playOnce);
+            document.removeEventListener('touchstart', playOnce);
+            document.removeEventListener('scroll', playOnce);
           };
           
           document.addEventListener('click', playOnce, { once: true });
+          document.addEventListener('touchstart', playOnce, { once: true });
+          document.addEventListener('scroll', playOnce, { once: true }); // ✅ Added scroll
         });
     };
 
