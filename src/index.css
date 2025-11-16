@@ -2877,3 +2877,130 @@ body.slide .oliven-nav-toggle {
     font-size: 26px !important;
   }
 }
+/* Names Section Layout */
+.names-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.bride-section,
+.groom-section {
+  text-align: center;
+  flex: 1;
+  max-width: 400px;
+}
+
+.name-text {
+  font-family: 'Alex Brush', cursive;
+  font-size: 90px;
+  color: #fff;
+  margin: 0 0 20px 0;
+  text-shadow: 
+    3px 3px 10px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(189, 148, 90, 0.5);
+  letter-spacing: 3px;
+  line-height: 1;
+}
+
+.ampersand-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.ampersand-large {
+  font-family: 'Alex Brush', cursive;
+  font-size: 70px;
+  color: #BD945A;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.parent-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  color: #BD945A;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 15px 0 8px 0;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.parent-names {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  line-height: 1.4;
+}
+
+/* Tablet */
+@media screen and (max-width: 991px) {
+  .name-text {
+    font-size: 70px;
+  }
+  
+  .ampersand-large {
+    font-size: 55px;
+  }
+  
+  .parent-names {
+    font-size: 16px;
+  }
+}
+
+/* Mobile - Stack vertically */
+@media screen and (max-width: 768px) {
+  .names-section {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .bride-section,
+  .groom-section {
+    max-width: 100%;
+  }
+  
+  .name-text {
+    font-size: 60px;
+  }
+  
+  .ampersand-wrapper {
+    padding-top: 0;
+    margin: 10px 0;
+  }
+  
+  .ampersand-large {
+    font-size: 48px;
+  }
+  
+  .parent-label {
+    font-size: 11px;
+    margin: 12px 0 6px 0;
+  }
+  
+  .parent-names {
+    font-size: 15px;
+  }
+}
+
+/* Extra small mobile */
+@media screen and (max-width: 480px) {
+  .name-text {
+    font-size: 48px;
+  }
+  
+  .ampersand-large {
+    font-size: 40px;
+  }
+  
+  .parent-names {
+    font-size: 14px;
+  }
+}
