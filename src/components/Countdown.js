@@ -72,7 +72,14 @@ function Countdown () {
 
   return (
     <div id='countdown' className='countdown-section section-padding'>
-      
+      {/* Animated background elements */}
+      <div className='countdown-bg-elements'>
+        <div className='floating-heart heart-1'>♥</div>
+        <div className='floating-heart heart-2'>♥</div>
+        <div className='floating-heart heart-3'>♥</div>
+        <div className='floating-heart heart-3'>♥</div>
+        <div className='floating-heart heart-1'>♥</div>
+      </div>
       
       <div className='container'>
         <div className='row'>
@@ -88,7 +95,7 @@ function Countdown () {
               <span className='divider-icon'>♥</span>
               <span className='divider-line'></span>
             </div>
-      
+            
           </div>
         </div>
         <div className='row'>

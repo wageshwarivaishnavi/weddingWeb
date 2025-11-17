@@ -7,12 +7,12 @@ import Organization from './components/Organization';
 import Sidebar from './components/Sidebar';
 import Story from './components/Story';
 import Where from './components/Where';
-import FloatingHearts from './components/FloatingHearts';
+
 
 function App() {
   return (
     <>
-    <FloatingHearts/>
+
       <Sidebar />
       <BackgroundMusic /> 
       <div id='oliven-main'>

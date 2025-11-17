@@ -3702,108 +3702,144 @@ body:hover .floating-ring,
 body:hover .floating-flower {
   opacity: 0.18;
   transition: opacity 0.5s ease;
-}
-/* Calendar Icon Badge */
-.calendar-icon-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  background: rgba(189, 148, 90, 0.2);
-  border-radius: 50%;
+}/* Calendar Menu Overlay */
+.calendar-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease;
 }
 
-.calendar-icon-badge i {
-  font-size: 18px;
-  color: #BD945A;
-}
-
-.event-card:hover .calendar-icon-badge {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* Add to Calendar Hint */
-.add-calendar-hint {
-  position: absolute;
-  bottom: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 12px;
-  color: #BD945A;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-.add-calendar-hint i {
-  font-size: 10px;
-  margin-right: 4px;
-}
-
-.event-card:hover .add-calendar-hint {
-  opacity: 1;
-  bottom: -40px;
-}
-
-/* Make event cards more interactive */
-.event-card {
-  cursor: pointer;
-  outline: none;
-}
-
-.event-card-inner {
+.calendar-menu {
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px 30px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   position: relative;
+  animation: slideUp 0.4s ease;
 }
 
-.event-card:active .event-card-inner {
-  transform: scale(0.98);
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Add ripple effect on click */
-.event-card::after {
-  content: '';
+.close-menu {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  background: rgba(189, 148, 90, 0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  transition: all 0.3s ease;
 }
 
-.event-card:active::after {
-  width: 300px;
-  height: 300px;
+.close-menu:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+  transform: rotate(90deg);
 }
 
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-  .calendar-icon-badge {
-    width: 35px;
-    height: 35px;
-    top: 10px;
-    right: 10px;
+.calendar-menu-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.calendar-menu-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.calendar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.calendar-option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 25px;
+  background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+  border: 2px solid rgba(189, 148, 90, 0.2);
+  border-radius: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.calendar-option i {
+  font-size: 24px;
+  color: #BD945A;
+}
+
+.calendar-option:hover {
+  background: linear-gradient(135deg, #BD945A 0%, #a67f4a 100%);
+  border-color: #BD945A;
+  color: #fff;
+  transform: translateX(10px);
+  box-shadow: 0 5px 20px rgba(189, 148, 90, 0.3);
+}
+
+.calendar-option:hover i {
+  color: #fff;
+}
+
+.calendar-option:active {
+  transform: translateX(10px) scale(0.98);
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 480px) {
+  .calendar-menu {
+    padding: 30px 20px;
   }
   
-  .calendar-icon-badge i {
-    font-size: 16px;
+  .calendar-menu-title {
+    font-size: 26px;
   }
   
-  .add-calendar-hint {
-    font-size: 11px;
+  .calendar-option {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+  
+  .calendar-option i {
+    font-size: 20px;
   }
 }

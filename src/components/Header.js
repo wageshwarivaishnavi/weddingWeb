@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Header () {
+  const [showCalendarMenu, setShowCalendarMenu] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
   
   const scrollToLocation = (e) => {
     e.preventDefault();
@@ -13,36 +15,58 @@ function Header () {
     }
   };
 
-  // Add to Calendar functions
-  const addToCalendar = (eventType) => {
+  // Generate ICS file content
+  const generateICS = (eventType) => {
     let title, startDate, endDate, details, location;
     
     if (eventType === 'reception') {
       title = 'Varsha & Vikas - Wedding Reception';
-      startDate = '20260304T180000'; // March 04, 2026, 6:00 PM
-      endDate = '20260304T230000';   // March 04, 2026, 11:00 PM
+      startDate = '20260304T180000Z'; // Z for UTC
+      endDate = '20260304T230000Z';
       details = 'Join us for the wedding reception of Varsha and Vikas';
       location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
     } else {
       title = 'Varsha & Vikas - Marriage Ceremony';
-      startDate = '20260305T110000'; // March 05, 2026, 11:00 AM
-      endDate = '20260305T120000';   // March 05, 2026, 12:00 PM
+      startDate = '20260305T110000Z';
+      endDate = '20260305T120000Z';
       details = 'Join us for the wedding ceremony of Varsha and Vikas';
       location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
     }
 
-    // Google Calendar URL
-    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
-    
-    // Open in new tab
-    window.open(googleCalendarUrl, '_blank');
+    return `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Varsha & Vikas Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:${eventType}-${Date.now()}@wedding.com
+DTSTART:${startDate}
+DTEND:${endDate}
+SUMMARY:${title}
+DESCRIPTION:${details}
+LOCATION:${location}
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Wedding Reminder - Tomorrow!
+END:VALARM
+END:VEVENT
+END:VCALENDAR`;
   };
 
-  // Download ICS file for Apple Calendar, Outlook, etc.
-  const downloadICS = (eventType) => {
+  // Handle event card click - show menu
+  const handleEventCardClick = (eventType) => {
+    setSelectedEvent(eventType);
+    setShowCalendarMenu(true);
+  };
+
+  // Add to Google Calendar
+  const addToGoogleCalendar = () => {
     let title, startDate, endDate, details, location;
     
-    if (eventType === 'reception') {
+    if (selectedEvent === 'reception') {
       title = 'Varsha & Vikas - Wedding Reception';
       startDate = '20260304T180000';
       endDate = '20260304T230000';
@@ -56,35 +80,62 @@ function Header () {
       location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
     }
 
-    const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-DTSTART:${startDate}
-DTEND:${endDate}
-SUMMARY:${title}
-DESCRIPTION:${details}
-LOCATION:${location}
-STATUS:CONFIRMED
-SEQUENCE:0
-END:VEVENT
-END:VCALENDAR`;
+    const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+    window.open(googleUrl, '_blank');
+    setShowCalendarMenu(false);
+  };
 
+  // Download ICS file (works for Apple Calendar, Outlook, etc.)
+  const downloadICS = () => {
+    const icsContent = generateICS(selectedEvent);
     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.href = window.URL.createObjectURL(blob);
-    link.download = `${eventType}-varsha-vikas.ics`;
+    link.href = url;
+    link.download = `${selectedEvent}-varsha-vikas-wedding.ics`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+    setShowCalendarMenu(false);
   };
 
-  // Show calendar options
-  const handleEventCardClick = (eventType) => {
-    if (window.confirm('Add to Calendar?\n\nClick OK for Google Calendar\nClick Cancel to download for Apple/Outlook')) {
-      addToCalendar(eventType);
+  // Add to Apple Calendar (iOS)
+  const addToAppleCalendar = () => {
+    const icsContent = generateICS(selectedEvent);
+    const blob = new Blob([icsContent], { type: 'text/calendar' });
+    const url = window.URL.createObjectURL(blob);
+    
+    // For iOS devices, this will trigger the calendar app
+    window.location.href = url;
+    
+    setTimeout(() => {
+      window.URL.revokeObjectURL(url);
+      setShowCalendarMenu(false);
+    }, 100);
+  };
+
+  // Add to Outlook
+  const addToOutlook = () => {
+    let title, startDate, endDate, details, location;
+    
+    if (selectedEvent === 'reception') {
+      title = 'Varsha & Vikas - Wedding Reception';
+      startDate = '2026-03-04T18:00:00';
+      endDate = '2026-03-04T23:00:00';
+      details = 'Join us for the wedding reception of Varsha and Vikas';
+      location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
     } else {
-      downloadICS(eventType);
+      title = 'Varsha & Vikas - Marriage Ceremony';
+      startDate = '2026-03-05T11:00:00';
+      endDate = '2026-03-05T12:00:00';
+      details = 'Join us for the wedding ceremony of Varsha and Vikas';
+      location = 'Adithi Hall, NO 2, 1st Main Rd, Kannan Nagar, Madipakkam, Chennai, Tamil Nadu 600091';
     }
+
+    const outlookUrl = `https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&subject=${encodeURIComponent(title)}&startdt=${encodeURIComponent(startDate)}&enddt=${encodeURIComponent(endDate)}&body=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+    window.open(outlookUrl, '_blank');
+    setShowCalendarMenu(false);
   };
 
   return (
@@ -147,7 +198,7 @@ END:VCALENDAR`;
                 Together Forever, From This Day Forward
               </p>
 
-              {/* Event details cards - NOW CLICKABLE */}
+              {/* Event details cards - CLICKABLE */}
               <div className='event-cards'>
                 <div 
                   className='event-card animate-box' 
@@ -155,7 +206,6 @@ END:VCALENDAR`;
                   onClick={() => handleEventCardClick('reception')}
                   role='button'
                   tabIndex='0'
-                  onKeyPress={(e) => e.key === 'Enter' && handleEventCardClick('reception')}
                 >
                   <div className='event-card-inner'>
                     <div className='calendar-icon-badge'>
@@ -176,7 +226,6 @@ END:VCALENDAR`;
                   onClick={() => handleEventCardClick('ceremony')}
                   role='button'
                   tabIndex='0'
-                  onKeyPress={(e) => e.key === 'Enter' && handleEventCardClick('ceremony')}
                 >
                   <div className='event-card-inner'>
                     <div className='calendar-icon-badge'>
@@ -206,6 +255,41 @@ END:VCALENDAR`;
           </div>
         </div>
       </div>
+
+      {/* Calendar Menu Popup */}
+      {showCalendarMenu && (
+        <div className='calendar-menu-overlay' onClick={() => setShowCalendarMenu(false)}>
+          <div className='calendar-menu' onClick={(e) => e.stopPropagation()}>
+            <button className='close-menu' onClick={() => setShowCalendarMenu(false)}>
+              <i className='ti-close'></i>
+            </button>
+            <h3 className='calendar-menu-title'>Add to Calendar</h3>
+            <p className='calendar-menu-subtitle'>Choose your calendar app</p>
+            
+            <div className='calendar-options'>
+              <button className='calendar-option' onClick={addToGoogleCalendar}>
+                <i className='ti-google'></i>
+                <span>Google Calendar</span>
+              </button>
+              
+              <button className='calendar-option' onClick={addToAppleCalendar}>
+                <i className='ti-apple'></i>
+                <span>Apple Calendar</span>
+              </button>
+              
+              <button className='calendar-option' onClick={addToOutlook}>
+                <i className='ti-microsoft'></i>
+                <span>Outlook</span>
+              </button>
+              
+              <button className='calendar-option' onClick={downloadICS}>
+                <i className='ti-download'></i>
+                <span>Download .ics File</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   )
 }
