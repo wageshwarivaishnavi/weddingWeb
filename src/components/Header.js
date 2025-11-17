@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Header () {
+  const [isInvitationTamil, setIsInvitationTamil] = useState(false);
   
   const scrollToLocation = (e) => {
     e.preventDefault();
@@ -19,26 +20,23 @@ function Header () {
     
     if (eventType === 'reception') {
       title = 'Varsha & Vikas - Wedding Reception';
-      startDate = '20260304T180000'; // March 04, 2026, 6:00 PM
-      endDate = '20260304T230000';   // March 04, 2026, 11:00 PM
+      startDate = '20260304T180000';
+      endDate = '20260304T230000';
       details = 'Join us for the wedding reception of Varsha and Vikas';
       location = 'Vysya Hall, M56Q+6H5, Military Rd, Ammapet, Salem, Tamil Nadu 636003';
     } else {
       title = 'Varsha & Vikas - Marriage Ceremony';
-      startDate = '20260305T110000'; // March 05, 2026, 11:00 AM
-      endDate = '20260305T120000';   // March 05, 2026, 12:00 PM
+      startDate = '20260305T110000';
+      endDate = '20260305T120000';
       details = 'Join us for the wedding ceremony of Varsha and Vikas';
       location = 'Vysya Hall, M56Q+6H5, Military Rd, Ammapet, Salem, Tamil Nadu 636003';
     }
 
-    // Google Calendar URL
     const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
     
-    // Open in new tab
     window.open(googleCalendarUrl, '_blank');
   };
 
-  // Download ICS file for Apple Calendar, Outlook, etc.
   const downloadICS = (eventType) => {
     let title, startDate, endDate, details, location;
     
@@ -78,7 +76,6 @@ END:VCALENDAR`;
     document.body.removeChild(link);
   };
 
-  // Show calendar options
   const handleEventCardClick = (eventType) => {
     if (window.confirm('Add to Calendar?\n\nClick OK for Google Calendar\nClick Cancel to download for Apple/Outlook')) {
       addToCalendar(eventType);
@@ -102,11 +99,28 @@ END:VCALENDAR`;
             </div>
             
             <div className='hero-content'>
+              {/* Translate Button */}
+              <button 
+                className='hero-translate-btn'
+                onClick={() => setIsInvitationTamil(!isInvitationTamil)}
+                title={isInvitationTamil ? 'Switch to English' : 'Switch to Tamil'}
+              >
+                {isInvitationTamil ? 'A' : 'அ'}
+              </button>
               
               {/* Invitation Message */}
               <div className='invitation-message animate-box' data-animate-effect='fadeInUp'>
-                <p className='invite-line-2'>We cordially invite you to celebrate</p>
-                <p className='invite-line-3'>The wedding of</p>
+                {isInvitationTamil ? (
+                  <>
+                    <p className='invite-line-2'>எங்கள் திருமண விழாவை கொண்டாட</p>
+                    <p className='invite-line-3'>உங்களை அன்புடன் அழைக்கிறோம்</p>
+                  </>
+                ) : (
+                  <>
+                    <p className='invite-line-2'>We cordially invite you to celebrate</p>
+                    <p className='invite-line-3'>The wedding of</p>
+                  </>
+                )}
               </div>
 
               {/* Names and Parents Layout */}
@@ -114,10 +128,19 @@ END:VCALENDAR`;
                 {/* Bride Section */}
                 <div className='bride-section'>
                   <h1 className='name-text animate-box' data-animate-effect='fadeInUp'>
-                    Varsha
+                    {isInvitationTamil ? 'வர்ஷா' : 'Varsha'}
                   </h1>
-                  <p className='parent-label'>DAUGHTER OF</p>
-                  <p className='parent-names'>Mr. K. Ravi & Mrs. Krithika Ravi</p>
+                  {isInvitationTamil ? (
+                    <>
+                      <p className='parent-label'>மகள்</p>
+                      <p className='parent-names'>திரு. கே. ரவி & திருமதி. கிருத்திகா ரவி</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className='parent-label'>DAUGHTER OF</p>
+                      <p className='parent-names'>Mr. K. Ravi & Mrs. Krithika Ravi</p>
+                    </>
+                  )}
                 </div>
 
                 {/* Ampersand */}
@@ -128,10 +151,19 @@ END:VCALENDAR`;
                 {/* Groom Section */}
                 <div className='groom-section'>
                   <h1 className='name-text animate-box' data-animate-effect='fadeInUp'>
-                    Vikas
+                    {isInvitationTamil ? 'விகாஸ்' : 'Vikas'}
                   </h1>
-                  <p className='parent-label'>SON OF</p>
-                  <p className='parent-names'>Mr. N. Kalyan & Mrs. Gayathri Kalyan</p>
+                  {isInvitationTamil ? (
+                    <>
+                      <p className='parent-label'>மகன்</p>
+                      <p className='parent-names'>திரு. என். கல்யாண் & திருமதி. காயத்ரி கல்யாண்</p>
+                    </>
+                  ) : (
+                    <>
+                      <p className='parent-label'>SON OF</p>
+                      <p className='parent-names'>Mr. N. Kalyan & Mrs. Gayathri Kalyan</p>
+                    </>
+                  )}
                 </div>
               </div>
 
@@ -144,10 +176,13 @@ END:VCALENDAR`;
             
               {/* Subtitle */}
               <p className='hero-subtitle animate-box' data-animate-effect='fadeInUp'>
-                Together Forever, From This Day Forward
+                {isInvitationTamil 
+                  ? 'இன்று முதல் என்றென்றும் ஒன்றாக'
+                  : 'Together Forever, From This Day Forward'
+                }
               </p>
 
-              {/* Event details cards - NOW CLICKABLE */}
+              {/* Event details cards - CLICKABLE */}
               <div className='event-cards'>
                 <div 
                   className='event-card animate-box' 
@@ -161,11 +196,17 @@ END:VCALENDAR`;
                     <div className='calendar-icon-badge'>
                       <i className='ti-calendar'></i>
                     </div>
-                    <h3 className='event-title'>Reception</h3>
-                    <div className='event-date'>March 04, 2026</div>
-                    <div className='event-time'>6:00 PM onwards</div>
+                    <h3 className='event-title'>
+                      {isInvitationTamil ? 'வரவேற்பு விழா' : 'Reception'}
+                    </h3>
+                    <div className='event-date'>
+                      {isInvitationTamil ? 'மார்ச் 04, 2026' : 'March 04, 2026'}
+                    </div>
+                    <div className='event-time'>
+                      {isInvitationTamil ? 'மாலை 6:00 முதல்' : '6:00 PM onwards'}
+                    </div>
                     <div className='add-calendar-hint'>
-                      <i className='ti-plus'></i> Add to Calendar
+                      <i className='ti-plus'></i> {isInvitationTamil ? 'காலண்டரில் சேர்க்க' : 'Add to Calendar'}
                     </div>
                   </div>
                 </div>
@@ -182,11 +223,17 @@ END:VCALENDAR`;
                     <div className='calendar-icon-badge'>
                       <i className='ti-calendar'></i>
                     </div>
-                    <h3 className='event-title'>Marriage Ceremony</h3>
-                    <div className='event-date'>March 05, 2026</div>
-                    <div className='event-time'>11:00 AM - 12:00 PM</div>
+                    <h3 className='event-title'>
+                      {isInvitationTamil ? 'திருமண விழா' : 'Marriage Ceremony'}
+                    </h3>
+                    <div className='event-date'>
+                      {isInvitationTamil ? 'மார்ச் 05, 2026' : 'March 05, 2026'}
+                    </div>
+                    <div className='event-time'>
+                      {isInvitationTamil ? 'காலை 11:00 - 12:00' : '11:00 AM - 12:00 PM'}
+                    </div>
                     <div className='add-calendar-hint'>
-                      <i className='ti-plus'></i> Add to Calendar
+                      <i className='ti-plus'></i> {isInvitationTamil ? 'காலண்டரில் சேர்க்க' : 'Add to Calendar'}
                     </div>
                   </div>
                 </div>
@@ -199,7 +246,7 @@ END:VCALENDAR`;
                   className='btn-primary hero-btn'
                 >
                   <i className='ti-location-pin'></i>
-                  View Location
+                  {isInvitationTamil ? 'இடத்தைப் பார்க்க' : 'View Location'}
                 </button>
               </div>
             </div>

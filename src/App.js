@@ -8,6 +8,7 @@ import Sidebar from './components/Sidebar';
 import Story from './components/Story';
 import Where from './components/Where';
 import RSVP from './components/RSVP';
+import Gallery from './components/Gallery';
 
 
 function App() {
