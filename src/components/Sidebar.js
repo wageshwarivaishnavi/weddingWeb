@@ -60,6 +60,12 @@ function Sidebar () {
                 </a>
               </li>
                <li className='menu-item'>
+                <a href='#gallery' onClick={closeMenu}>
+                  <span className='menu-icon'><i className='ti-location-pin'></i></span>
+                  <span className='menu-text'>Engagement Gallery</span>
+                </a>
+              </li>
+               <li className='menu-item'>
                 <a href='#countdown' onClick={closeMenu}>
                   <span className='menu-icon'><i className='ti-home'></i></span>
                   <span className='menu-text'>Countdown</span>
