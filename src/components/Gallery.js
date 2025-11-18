@@ -16,6 +16,8 @@ import gallery7 from '../assets/images/7.jpg'
 import gallery8 from '../assets/images/8.jpg'
 import gallery9 from '../assets/images/9.jpg'
 import gallery10 from '../assets/images/10.jpg'
+import gallery11 from '../assets/images/11.jpg'
+import gallery12 from '../assets/images/12.jpg'
 
 function Gallery () {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -30,7 +32,9 @@ function Gallery () {
     { id: 7, image: gallery7 },
     { id: 8, image: gallery8 },
     { id: 9, image: gallery9 },
-    { id: 10, image: gallery10 }
+    { id: 10, image: gallery10 },
+    { id: 11, image: gallery11 },
+    { id: 12, image: gallery12 }
   ];
 
   const openLightbox = (photo) => {
