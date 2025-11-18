@@ -21,6 +21,7 @@ function App() {
         <Header />
       <Organization />
       <Story />
+      <Gallery/>
         <Countdown />
         
         <Where />
