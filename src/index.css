@@ -21,25 +21,22 @@
 
 ------------------------------------------------------------------- */
 
-
 /* ===== Google Fonts ===== */
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
 
 /* ===== Default style ===== */
 html,
 body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 body {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.75em;
-    color: #888;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #888;
 }
 /*** typography ***/
 /* headings */
@@ -49,220 +46,217 @@ h3,
 h4,
 h5,
 h6 {
-    color: #000;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    line-height: 1.25em;
-    margin: 0 0 20px 0;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: 1.25em;
+  margin: 0 0 20px 0;
 }
 /* paragraph */
 p {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.75em;
-    color: #888;
-    margin: 0 0 20px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75em;
+  color: #888;
+  margin: 0 0 20px;
 }
 /* lists */
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 /* links */
 a {
-    color: #000;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    text-decoration: none;
+  color: #000;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
 }
 a:hover,
 a:active,
 a:focus {
-    color: #000;
-    outline: none;
-    text-decoration: none;
+  color: #000;
+  outline: none;
+  text-decoration: none;
 }
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .small,
 small {
-    font-size: 80%;
+  font-size: 80%;
 }
 b,
 strong {
-    color: #000;
-    font-weight: 600;
+  color: #000;
+  font-weight: 600;
 }
 span,
 a,
 a:hover {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
 }
 button {
-    font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 /* padding */
 .p-40 {
-    padding: 40px
+  padding: 40px;
 }
 /* margin */
 .mb-0 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .mb-30 {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 .mb-60 {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 /* important */
 .container-fluid {
-    padding-right: 30px;
-    padding-left: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 .container {
-    padding-right: 60px;
-    padding-left: 60px;
+  padding-right: 60px;
+  padding-left: 60px;
 }
 .section-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .js .animate-box {
-    opacity: 0;
+  opacity: 0;
 }
 .clear {
-    clear: both;
+  clear: both;
 }
 .o-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 .pos-re {
-    position: relative;
+  position: relative;
 }
 .full-width {
-    width: 100% !important;
+  width: 100% !important;
 }
 .bg-img {
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .bg-fixed {
-    background-attachment: fixed;
+  background-attachment: fixed;
 }
 .bg-cover {
-    background-size: cover !important;
+  background-size: cover !important;
 }
 .v-middle {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translate(0%, -50%);
-    transform: translate(0%, -50%);
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
 }
 .valign {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .bg-pink {
-    background-color: #faf8f7;
+  background-color: #faf8f7;
 }
 .bg-white {
-    background-color: #fff;
+  background-color: #fff;
 }
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* ===== Scrollbar ===== */
 ::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }
 ::-webkit-scrollbar-track {
-    background: #fff;
+  background: #fff;
 }
 ::-webkit-scrollbar-thumb {
-    background: #BD945A;
+  background: #bd945a;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #BD945A;
+  background: #bd945a;
 }
-
 
 /* ===== Selection ===== */
 ::-webkit-selection {
-    color: #fff;
-    background: rgba(189, 148, 90, 0.75);
+  color: #fff;
+  background: rgba(189, 148, 90, 0.75);
 }
 ::-moz-selection {
-    color: #fff;
-    background: rgba(189, 148, 90, 0.75);
+  color: #fff;
+  background: rgba(189, 148, 90, 0.75);
 }
 ::selection {
-    color: #fff;
-    background: rgba(189, 148, 90, 0.75);
+  color: #fff;
+  background: rgba(189, 148, 90, 0.75);
 }
-
 
 /* ===== Owl Carousel custom style ===== */
 .owl-theme .owl-nav.disabled + .owl-dots {
-    line-height: .7;
+  line-height: 0.7;
 }
 .owl-theme .owl-dots .owl-dot span {
-    width: 6px;
-    height: 6px;
-    margin: 0 2px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.2);
+  width: 6px;
+  height: 6px;
+  margin: 0 2px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
 }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #BD945A;
+  background: #bd945a;
 }
-.owl-theme .owl-nav [class*=owl-] {
-    background-color: #BD945A;
-    width: 30px;
-    height: 30px;
-    line-height: 25px;
-    border-radius: 50%;
+.owl-theme .owl-nav [class*="owl-"] {
+  background-color: #bd945a;
+  width: 30px;
+  height: 30px;
+  line-height: 25px;
+  border-radius: 50%;
 }
-.owl-theme .owl-nav [class*=owl-] {
-    color: #FFF;
-    font-size: 12px;
-    margin: 5px;
-    padding: 4px 7px;
-    background: #BD945A;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 3px;
+.owl-theme .owl-nav [class*="owl-"] {
+  color: #fff;
+  font-size: 12px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #bd945a;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
 }
-.owl-theme .owl-nav [class*=owl-] {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    width: 30px;
-    height: 30px;
-    line-height: 25px;
-    border-radius: 50%;
-    color: rgba(255, 255, 255, 0.6);
+.owl-theme .owl-nav [class*="owl-"] {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  width: 30px;
+  height: 30px;
+  line-height: 25px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.6);
 }
-.owl-theme .owl-nav [class*=owl-]:hover {
-    background-color: transparent;
-    border: 1px solid #BD945A;
-    color: #BD945A;
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background-color: transparent;
+  border: 1px solid #bd945a;
+  color: #bd945a;
 }
-
 
 /* ===== Beautiful Sidebar Style ===== */
 #oliven-aside {
@@ -322,7 +316,7 @@ button {
   margin: 0 auto 20px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #BD945A;
+  border: 3px solid #bd945a;
   padding: 5px;
   background: #fff;
   transition: all 0.4s ease;
@@ -342,7 +336,7 @@ button {
 }
 
 .couple-names {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 36px;
   color: #333;
   display: block;
@@ -352,12 +346,12 @@ button {
 }
 
 .couple-names:hover {
-  color: #BD945A;
+  color: #bd945a;
 }
 
 .ampersand {
   font-size: 24px;
-  color: #BD945A;
+  color: #bd945a;
   margin: 0 5px;
   font-weight: 400;
 }
@@ -373,17 +367,18 @@ button {
 .divider-line {
   width: 40px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #BD945A, transparent);
+  background: linear-gradient(90deg, transparent, #bd945a, transparent);
 }
 
 .divider-heart {
-  color: #BD945A !important;
+  color: #bd945a !important;
   font-size: 14px;
   animation: heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -392,7 +387,7 @@ button {
 }
 
 .wedding-dates {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: #666;
@@ -421,10 +416,18 @@ button {
   animation: fadeInLeft 0.6s ease-out forwards;
 }
 
-.menu-item:nth-child(1) { animation-delay: 0.1s; }
-.menu-item:nth-child(2) { animation-delay: 0.2s; }
-.menu-item:nth-child(3) { animation-delay: 0.3s; }
-.menu-item:nth-child(4) { animation-delay: 0.4s; }
+.menu-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.menu-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.menu-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.menu-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
 
 @keyframes fadeInLeft {
   from {
@@ -444,7 +447,7 @@ button {
   margin-bottom: 5px;
   color: #555;
   text-decoration: none;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 500;
   font-size: 18px;
   border-radius: 10px;
@@ -454,13 +457,13 @@ button {
 }
 
 .menu-item a::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 4px;
   height: 100%;
-  background: #BD945A;
+  background: #bd945a;
   transform: scaleY(0);
   transition: transform 0.3s ease;
 }
@@ -472,7 +475,7 @@ button {
 
 .menu-item a:hover {
   background: rgba(189, 148, 90, 0.1);
-  color: #BD945A;
+  color: #bd945a;
   padding-left: 25px;
 }
 
@@ -483,7 +486,7 @@ button {
   justify-content: center;
   margin-right: 12px;
   font-size: 18px;
-  color: #BD945A;
+  color: #bd945a;
 }
 
 .menu-text {
@@ -501,7 +504,7 @@ button {
 #oliven-aside .separator {
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #BD945A, transparent);
+  background: linear-gradient(90deg, transparent, #bd945a, transparent);
   display: block;
   margin: 0 auto 20px;
 }
@@ -519,7 +522,7 @@ button {
 }
 
 .footer-date {
-  color: #BD945A;
+  color: #bd945a;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 1px;
@@ -530,13 +533,14 @@ button {
 }
 
 .footer-heart i {
-  color: #BD945A !important;
+  color: #bd945a !important;
   font-size: 20px;
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 0.7;
   }
@@ -549,7 +553,6 @@ button {
 .sidebar-overlay {
   display: none;
 }
-
 
 /* ===== Main Content Layout ===== */
 #oliven-main {
@@ -574,164 +577,162 @@ button {
   padding: 0 15px;
 }
 
-
 /* ===== Navigation styles ===== */
 .oliven-nav-toggle {
-    position: fixed;
-    left: 15px; /* Keep it left */
-    top: 15px; /* Keep it top */
-    z-index: 9999;
-    cursor: pointer;
-    opacity: 1;
-    visibility: hidden;
-    padding: 12px 15px;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    background: transparent;
-    margin: 0; /* CHANGED - removed margin */
-    border-radius: 0;
-    box-shadow: none;
+  position: fixed;
+  left: 15px; /* Keep it left */
+  top: 15px; /* Keep it top */
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 1;
+  visibility: hidden;
+  padding: 12px 15px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background: transparent;
+  margin: 0; /* CHANGED - removed margin */
+  border-radius: 0;
+  box-shadow: none;
 }
 .oliven-nav-toggle.active i::before,
 .oliven-nav-toggle.active i::after {
-    background: #fff;
+  background: #fff;
 }
 .oliven-nav-toggle.dark.active i::before,
 .oliven-nav-toggle.dark.active i::after {
-    background: #000;
+  background: #000;
 }
 .oliven-nav-toggle:hover,
 .oliven-nav-toggle:focus,
 .oliven-nav-toggle:active {
-    outline: none;
-    border-bottom: none !important;
+  outline: none;
+  border-bottom: none !important;
 }
 .oliven-nav-toggle i {
-    position: relative;
-    display: -moz-inline-stack;
-    display: inline-block;
-    zoom: 1;
-    width: 19px;
-    height: 1px;
-    color: #fff;
-    font: bold 14px/.4 Helvetica;
-    text-transform: uppercase;
-    text-indent: -55px;
-    background: #fff;
-    -webkit-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out;
-    top: -4px;
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  width: 19px;
+  height: 1px;
+  color: #fff;
+  font: bold 14px/0.4 Helvetica;
+  text-transform: uppercase;
+  text-indent: -55px;
+  background: #fff;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  top: -4px;
 }
 .oliven-nav-toggle i::before,
 .oliven-nav-toggle i::after {
-    content: '';
-    width: 20px;
-    height: 1px;
-    background: #fff;
-    position: absolute;
-    left: 0;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .oliven-nav-toggle.dark i {
-    position: relative;
-    color: #000;
-    background: #000;
-    -webkit-transition: all .2s ease-out;
-    -o-transition: all .2s ease-out;
-    transition: all .2s ease-out;
+  position: relative;
+  color: #000;
+  background: #000;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .oliven-nav-toggle.dark i::before,
 .oliven-nav-toggle.dark i::after {
-    background: #000;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
+  background: #000;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .oliven-nav-toggle i::before {
-    top: -7px;
+  top: -7px;
 }
 .oliven-nav-toggle i::after {
-    bottom: -7px;
+  bottom: -7px;
 }
 .oliven-nav-toggle:hover i::before {
-    top: -10px;
+  top: -10px;
 }
 .oliven-nav-toggle:hover i::after {
-    bottom: -10px;
+  bottom: -10px;
 }
 .oliven-nav-toggle.active i {
-    background: transparent;
+  background: transparent;
 }
 .oliven-nav-toggle.active i::before {
-    top: 0;
-    -webkit-transform: rotateZ(45deg);
-    -moz-transform: rotateZ(45deg);
-    -ms-transform: rotateZ(45deg);
-    -o-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
+  top: 0;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
 }
 .oliven-nav-toggle.active i::after {
-    bottom: 0;
-    -webkit-transform: rotateZ(-45deg);
-    -moz-transform: rotateZ(-45deg);
-    -ms-transform: rotateZ(-45deg);
-    -o-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg);
+  bottom: 0;
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  -ms-transform: rotateZ(-45deg);
+  -o-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
 }
 .oliven-nav-toggle {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: 9999;
-    cursor: pointer;
-    opacity: 1;
-    visibility: hidden;
-    padding: 12px 15px;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    background: #BD945A;
-    margin: 15px 30px;
-    border-radius: 50%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 1;
+  visibility: hidden;
+  padding: 12px 15px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background: #bd945a;
+  margin: 15px 30px;
+  border-radius: 50%;
 }
 @media screen and (max-width: 768px) {
-    .oliven-nav-toggle {
-        opacity: 1;
-        visibility: visible;
-        left: 15px; /* Fixed position */
-        top: 15px;
-    }
+  .oliven-nav-toggle {
+    opacity: 1;
+    visibility: visible;
+    left: 15px; /* Fixed position */
+    top: 15px;
+  }
 }
 body.slide {
-    overflow: hidden !important;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
 }
- body.slide #oliven-aside {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-    z-index: 1000;
-    overflow-y: auto !important; /* KEEP SCROLLABLE WHEN OPEN */
-    -webkit-overflow-scrolling: touch;
-  }
+body.slide #oliven-aside {
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  z-index: 1000;
+  overflow-y: auto !important; /* KEEP SCROLLABLE WHEN OPEN */
+  -webkit-overflow-scrolling: touch;
+}
 body.slide #oliven-main,
 body.slide .oliven-nav-toggle {
-    top: 0;
-    -moz-transform: translateX(280px);
-    -webkit-transform: translateX(280px);
-    -ms-transform: translateX(280px);
-    -o-transform: translateX(280px);
-    transform: translateX(280px);
+  top: 0;
+  -moz-transform: translateX(280px);
+  -webkit-transform: translateX(280px);
+  -ms-transform: translateX(280px);
+  -o-transform: translateX(280px);
+  transform: translateX(280px);
 }
-
 
 /* ======= Stunning Header Style ======= */
 .header {
@@ -748,7 +749,6 @@ body.slide .oliven-nav-toggle {
   opacity: 120;
 }
 
-
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -756,30 +756,33 @@ body.slide .oliven-nav-toggle {
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    135deg, 
-    rgba(0, 0, 0, 0.75) 0%, 
-    rgba(0, 0, 0, 0.65) 50%, 
+    135deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.65) 50%,
     rgba(0, 0, 0, 0.75) 100%
   );
   z-index: 1;
 }
 
 .hero-overlay::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(circle, rgba(189, 148, 90, 0.03) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(189, 148, 90, 0.03) 1px,
+    transparent 1px
+  );
   background-size: 30px 30px;
 }
 
 .header .container {
   position: relative;
   z-index: 2;
-  padding-top: 60px; 
+  padding-top: 60px;
 }
 
 .hero-content {
@@ -794,13 +797,11 @@ body.slide .oliven-nav-toggle {
 }
 
 .hero-names {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 100px;
   color: #fff;
   margin: 0 0 30px 0;
-  text-shadow: 
-    3px 3px 10px rgba(0, 0, 0, 0.8),
-    0 0 30px rgba(189, 148, 90, 0.5);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(189, 148, 90, 0.5);
   letter-spacing: 3px;
   animation: fadeInScale 1.2s ease-out;
   line-height: 1.2;
@@ -830,16 +831,16 @@ body.slide .oliven-nav-toggle {
 .divider-line-right {
   width: 150px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #BD945A);
+  background: linear-gradient(90deg, transparent, #bd945a);
   box-shadow: 0 0 10px rgba(189, 148, 90, 0.5);
 }
 
 .divider-line-right {
-  background: linear-gradient(90deg, #BD945A, transparent);
+  background: linear-gradient(90deg, #bd945a, transparent);
 }
 
 .hero-subtitle {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 26px;
   color: #fff;
   font-weight: 400;
@@ -852,8 +853,6 @@ body.slide .oliven-nav-toggle {
 
 .event-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
   margin: 50px 0;
   max-width: 750px;
   margin-left: auto;
@@ -889,16 +888,16 @@ body.slide .oliven-nav-toggle {
 }
 
 .event-card-inner::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    90deg, 
-    transparent, 
-    rgba(189, 148, 90, 0.2), 
+    90deg,
+    transparent,
+    rgba(189, 148, 90, 0.2),
     transparent
   );
   transition: left 0.6s ease;
@@ -915,14 +914,14 @@ body.slide .oliven-nav-toggle {
     rgba(189, 148, 90, 0.25) 0%,
     rgba(189, 148, 90, 0.15) 100%
   );
-  border-color: #BD945A;
+  border-color: #bd945a;
   box-shadow: 0 25px 60px rgba(189, 148, 90, 0.4);
 }
 
 .event-icon {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #BD945A, #a67f4a);
+  background: linear-gradient(135deg, #bd945a, #a67f4a);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -942,9 +941,9 @@ body.slide .oliven-nav-toggle {
 }
 
 .event-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 22px;
-  color: #BD945A;
+  color: #bd945a;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -953,7 +952,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .event-date {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
   color: #fff;
   font-weight: 700;
@@ -962,7 +961,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .event-time {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 400;
@@ -980,7 +979,7 @@ body.slide .oliven-nav-toggle {
 
 .hero-btn {
   padding: 18px 45px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1002,12 +1001,12 @@ body.slide .oliven-nav-toggle {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #BD945A 0%, #a67f4a 100%);
+  background: linear-gradient(135deg, #bd945a 0%, #a67f4a 100%);
   color: #fff;
 }
 
 .btn-primary::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -1029,7 +1028,7 @@ body.slide .oliven-nav-toggle {
 .btn-secondary {
   background: transparent;
   color: #fff;
-  border: 3px solid #BD945A;
+  border: 3px solid #bd945a;
 }
 
 .btn-secondary:hover {
@@ -1059,12 +1058,12 @@ body.slide .oliven-nav-toggle {
 }
 
 .scroll-link:hover {
-  color: #BD945A;
+  color: #bd945a;
   transform: translateY(-8px);
 }
 
 .scroll-text {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -1078,7 +1077,7 @@ body.slide .oliven-nav-toggle {
 .scroll-icon {
   width: 45px;
   height: 45px;
-  border: 2px solid #BD945A;
+  border: 2px solid #bd945a;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1093,7 +1092,11 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -1105,8 +1108,12 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
@@ -1120,70 +1127,68 @@ body.slide .oliven-nav-toggle {
   }
 }
 
-
 /* ===== Title style ===== */
 .oliven-title {
-    color: #000;
-    font-family: 'Cormorant Garamond', serif;
-    margin-bottom: 0px;
-    font-weight: 500;
-    font-size: 30px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 0px;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 .oliven-title span {
-    display: block;
+  display: block;
 }
 .oliven-story-title {
-    color: #000;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: 30px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .oliven-story-subtitle {
-    display: block;
-    position: relative;
-    top: 12px;
-    font-family: 'Alex Brush', cursive;
-    font-weight: 400;
-    font-size: 30px;
-    color: #BD945A;
-    line-height: 1.25em;
-    margin-bottom: 10px;
+  display: block;
+  position: relative;
+  top: 12px;
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-size: 30px;
+  color: #bd945a;
+  line-height: 1.25em;
+  margin-bottom: 10px;
 }
 .oliven-couple-title {
-     display: block;
-    position: relative;
-    top: 12px;
-    font-family: 'Alex Brush', cursive;
-    font-weight: 400;
-    font-size: 60px;
-    color: #BD945A;
-    line-height: 1.5em;
-    margin-bottom: 5px;
+  display: block;
+  position: relative;
+  top: 12px;
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-size: 60px;
+  color: #bd945a;
+  line-height: 1.5em;
+  margin-bottom: 5px;
 }
 .oliven-couple-subtitle {
-    color: #000;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: 18px;
-    margin-bottom: 0;
+  color: #000;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 0;
 }
 .oliven-title-meta {
-    display: block;
-    position: relative;
-    top: 12px;
-    font-family: 'Alex Brush', cursive;
-    font-weight: 400;
-    font-size: 30px;
-    color: #BD945A;
-    line-height: 1.5em;
-    margin-bottom: 10px;
+  display: block;
+  position: relative;
+  top: 12px;
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-size: 30px;
+  color: #bd945a;
+  line-height: 1.5em;
+  margin-bottom: 10px;
 }
-
 
 /* ======= Stunning Countdown Section ======= */
 .countdown-section {
@@ -1194,15 +1199,22 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 30%, rgba(189, 148, 90, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(189, 148, 90, 0.05) 0%, transparent 50%);
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      rgba(189, 148, 90, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(189, 148, 90, 0.05) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -1226,7 +1238,7 @@ body.slide .oliven-nav-toggle {
 
 .floating-heart {
   font-size: 40px;
-  color: #BD945A;
+  color: #bd945a;
 }
 
 .floating-ring {
@@ -1269,7 +1281,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
   25% {
@@ -1294,10 +1307,10 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-subtitle {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #BD945A;
+  color: #bd945a;
   text-transform: uppercase;
   letter-spacing: 4px;
   display: block;
@@ -1306,7 +1319,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-title {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 70px;
   color: #333;
   margin-bottom: 25px;
@@ -1325,29 +1338,32 @@ body.slide .oliven-nav-toggle {
 .divider-line {
   width: 80px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #BD945A, transparent);
+  background: linear-gradient(90deg, transparent, #bd945a, transparent);
 }
 
 .divider-icon {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 20px;
   animation: heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
-  10%, 30% {
+  10%,
+  30% {
     transform: scale(1.2);
   }
-  20%, 40% {
+  20%,
+  40% {
     transform: scale(1.1);
   }
 }
 
 .countdown-intro {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   color: #666;
   font-style: italic;
@@ -1368,10 +1384,18 @@ body.slide .oliven-nav-toggle {
   animation: fadeInUp 0.8s ease-out backwards;
 }
 
-.countdown-item:nth-child(1) { animation-delay: 0.1s; }
-.countdown-item:nth-child(3) { animation-delay: 0.2s; }
-.countdown-item:nth-child(5) { animation-delay: 0.3s; }
-.countdown-item:nth-child(7) { animation-delay: 0.4s; }
+.countdown-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.countdown-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.countdown-item:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.countdown-item:nth-child(7) {
+  animation-delay: 0.4s;
+}
 
 .countdown-box {
   position: relative;
@@ -1383,8 +1407,7 @@ body.slide .oliven-nav-toggle {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 
-    0 10px 40px rgba(189, 148, 90, 0.15),
+  box-shadow: 0 10px 40px rgba(189, 148, 90, 0.15),
     inset 0 -2px 10px rgba(189, 148, 90, 0.05);
   border: 2px solid rgba(189, 148, 90, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1392,13 +1415,13 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-box::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(45deg, #BD945A, #f4d9a8, #BD945A, #f4d9a8);
+  background: linear-gradient(45deg, #bd945a, #f4d9a8, #bd945a, #f4d9a8);
   border-radius: 20px;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -1408,7 +1431,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes gradientShift {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -1422,10 +1446,9 @@ body.slide .oliven-nav-toggle {
 
 .countdown-box:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 
-    0 20px 60px rgba(189, 148, 90, 0.3),
+  box-shadow: 0 20px 60px rgba(189, 148, 90, 0.3),
     inset 0 -2px 10px rgba(189, 148, 90, 0.1);
-  border-color: #BD945A;
+  border-color: #bd945a;
 }
 
 .countdown-glow {
@@ -1435,13 +1458,18 @@ body.slide .oliven-nav-toggle {
   transform: translate(-50%, -50%);
   width: 120%;
   height: 120%;
-  background: radial-gradient(circle, rgba(189, 148, 90, 0.2) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(189, 148, 90, 0.2) 0%,
+    transparent 70%
+  );
   animation: glowPulse 2s ease-in-out infinite;
   pointer-events: none;
 }
 
 @keyframes glowPulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.3;
     transform: translate(-50%, -50%) scale(1);
   }
@@ -1452,10 +1480,10 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-number {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 56px;
   font-weight: 700;
-  color: #BD945A;
+  color: #bd945a;
   line-height: 1;
   margin-bottom: 8px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
@@ -1475,7 +1503,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-label {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 600;
   color: #666;
@@ -1485,14 +1513,15 @@ body.slide .oliven-nav-toggle {
 
 .countdown-separator {
   font-size: 40px;
-  color: #BD945A;
+  color: #bd945a;
   align-self: center;
   opacity: 0.5;
   animation: separatorBlink 2s infinite;
 }
 
 @keyframes separatorBlink {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
   }
   50% {
@@ -1505,7 +1534,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-message {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 22px;
   color: #666;
   margin-top: 50px;
@@ -1514,7 +1543,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .countdown-message i {
-  color: #BD945A;
+  color: #bd945a;
   margin: 0 10px;
   animation: heartbeat 1.5s infinite;
 }
@@ -1533,7 +1562,7 @@ body.slide .oliven-nav-toggle {
   position: absolute;
   width: 10px;
   height: 10px;
-  background: #BD945A;
+  background: #bd945a;
   border-radius: 50%;
   animation: confetti 5s infinite ease-in-out;
 }
@@ -1589,12 +1618,13 @@ body.slide .oliven-nav-toggle {
 
 .celebration-icon i {
   font-size: 100px;
-  color: #BD945A;
+  color: #bd945a;
   filter: drop-shadow(0 0 30px rgba(189, 148, 90, 0.6));
 }
 
 @keyframes celebrationPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -1603,7 +1633,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .celebration-title {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 80px;
   color: #333;
   margin-bottom: 20px;
@@ -1612,7 +1642,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .celebration-text {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 24px;
   color: #666;
   font-style: italic;
@@ -1644,7 +1674,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes sparkleRotate {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg) scale(1);
   }
   50% {
@@ -1657,16 +1688,16 @@ body.slide .oliven-nav-toggle {
   .countdown-title {
     font-size: 55px;
   }
-  
+
   .countdown-box {
     width: 140px;
     height: 140px;
   }
-  
+
   .countdown-number {
     font-size: 48px;
   }
-  
+
   .celebration-title {
     font-size: 65px;
   }
@@ -1676,29 +1707,29 @@ body.slide .oliven-nav-toggle {
   .countdown-wrapper {
     gap: 15px;
   }
-  
+
   .countdown-box {
     width: 120px;
     height: 120px;
   }
-  
+
   .countdown-number {
     font-size: 40px;
   }
-  
+
   .countdown-label {
     font-size: 11px;
   }
-  
+
   .countdown-separator {
     font-size: 30px;
     margin: 0 5px;
   }
-  
+
   .countdown-title {
     font-size: 45px;
   }
-  
+
   .celebration-title {
     font-size: 50px;
   }
@@ -1709,19 +1740,19 @@ body.slide .oliven-nav-toggle {
     width: 100px;
     height: 100px;
   }
-  
+
   .countdown-number {
     font-size: 32px;
   }
-  
+
   .countdown-label {
     font-size: 10px;
   }
-  
+
   .countdown-separator {
     display: none;
   }
-  
+
   .countdown-wrapper {
     gap: 10px;
   }
@@ -1729,8 +1760,12 @@ body.slide .oliven-nav-toggle {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
@@ -1773,10 +1808,10 @@ body.slide .oliven-nav-toggle {
 
 /* Header */
 .section-subtitle {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 12px;
   font-weight: 700;
-  color: #BD945A;
+  color: #bd945a;
   text-transform: uppercase;
   letter-spacing: 3px;
   display: block;
@@ -1784,7 +1819,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .section-title {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 55px;
   color: #333;
   margin: 0;
@@ -1869,9 +1904,9 @@ body.slide .oliven-nav-toggle {
 }
 
 .story-quote-text {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 32px;
-  color: #BD945A;
+  color: #bd945a;
   margin: 0;
   font-weight: 400;
   line-height: 1.4;
@@ -1889,14 +1924,14 @@ body.slide .oliven-nav-toggle {
 }
 
 .story-lead {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 20px;
-  color: #BD945A;
+  color: #bd945a;
   font-weight: 600;
   line-height: 1.7;
   margin: 20px 0;
   padding-left: 15px;
-  border-left: 3px solid #BD945A;
+  border-left: 3px solid #bd945a;
   transition: all 0.3s ease;
   animation: fadeInLeft 0.8s ease-out backwards;
 }
@@ -1933,19 +1968,22 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes heartBeat {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
-  10%, 30% {
+  10%,
+  30% {
     transform: scale(1.15);
   }
-  20%, 40% {
+  20%,
+  40% {
     transform: scale(1.1);
   }
 }
 
 .story-line {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #666;
@@ -1956,12 +1994,24 @@ body.slide .oliven-nav-toggle {
   animation: fadeInRight 0.6s ease-out backwards;
 }
 
-.story-line:nth-child(2) { animation-delay: 0.3s; }
-.story-line:nth-child(3) { animation-delay: 0.4s; }
-.story-line:nth-child(4) { animation-delay: 0.5s; }
-.story-line:nth-child(5) { animation-delay: 0.6s; }
-.story-line:nth-child(6) { animation-delay: 0.7s; }
-.story-line:nth-child(7) { animation-delay: 0.8s; }
+.story-line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.story-line:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.story-line:nth-child(4) {
+  animation-delay: 0.5s;
+}
+.story-line:nth-child(5) {
+  animation-delay: 0.6s;
+}
+.story-line:nth-child(6) {
+  animation-delay: 0.7s;
+}
+.story-line:nth-child(7) {
+  animation-delay: 0.8s;
+}
 
 @keyframes fadeInRight {
   from {
@@ -1975,14 +2025,14 @@ body.slide .oliven-nav-toggle {
 }
 
 .story-line::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 6px;
   height: 6px;
-  background: #BD945A;
+  background: #bd945a;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -2010,12 +2060,12 @@ body.slide .oliven-nav-toggle {
 .divider-line-right {
   width: 80px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #BD945A);
+  background: linear-gradient(90deg, transparent, #bd945a);
   transition: width 0.4s ease;
 }
 
 .divider-line-right {
-  background: linear-gradient(90deg, #BD945A, transparent);
+  background: linear-gradient(90deg, #bd945a, transparent);
 }
 
 .story-divider:hover .divider-line-left,
@@ -2024,13 +2074,14 @@ body.slide .oliven-nav-toggle {
 }
 
 .divider-heart {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 20px;
   animation: heartPulse 2s infinite;
 }
 
 @keyframes heartPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -2043,7 +2094,7 @@ body.slide .oliven-nav-toggle {
   background: linear-gradient(135deg, #fff 0%, #fffaf7 100%);
   padding: 35px 40px;
   border-radius: 15px;
-  border-left: 4px solid #BD945A;
+  border-left: 4px solid #bd945a;
   box-shadow: 0 8px 30px rgba(189, 148, 90, 0.12);
   position: relative;
   transition: all 0.4s ease;
@@ -2066,7 +2117,7 @@ body.slide .oliven-nav-toggle {
   border-radius: 50%;
   background: #fff;
   border: 2px solid rgba(189, 148, 90, 0.3);
-  color: #BD945A;
+  color: #bd945a;
   font-size: 14px;
   font-weight: 700;
   display: flex;
@@ -2078,15 +2129,15 @@ body.slide .oliven-nav-toggle {
 }
 
 .invitation-translate-btn:hover {
-  background: linear-gradient(135deg, #BD945A, #f4d9a8);
-  border-color: #BD945A;
+  background: linear-gradient(135deg, #bd945a, #f4d9a8);
+  border-color: #bd945a;
   color: #fff;
   transform: rotate(360deg) scale(1.1);
   box-shadow: 0 4px 15px rgba(189, 148, 90, 0.4);
 }
 
 .invitation-heading {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 26px;
   color: #333;
   font-weight: 700;
@@ -2096,11 +2147,11 @@ body.slide .oliven-nav-toggle {
 }
 
 .invitation-section:hover .invitation-heading {
-  color: #BD945A;
+  color: #bd945a;
 }
 
 .invitation-paragraph {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #666;
@@ -2112,40 +2163,40 @@ body.slide .oliven-nav-toggle {
   .section-title {
     font-size: 42px;
   }
-  
+
   .story-image-container {
     margin-bottom: 30px;
   }
-  
+
   .story-quote-section {
     padding: 15px 30px;
   }
-  
+
   .quote-mark-left,
   .quote-mark-right {
     font-size: 40px;
   }
-  
+
   .story-quote-text {
     font-size: 26px;
   }
-  
+
   .story-lead {
     font-size: 18px;
   }
-  
+
   .story-line {
     font-size: 15px;
   }
-  
+
   .invitation-section {
     padding: 30px 25px;
   }
-  
+
   .invitation-heading {
     font-size: 22px;
   }
-  
+
   .invitation-paragraph {
     font-size: 15px;
   }
@@ -2155,15 +2206,15 @@ body.slide .oliven-nav-toggle {
   .section-title {
     font-size: 36px;
   }
-  
+
   .story-quote-text {
     font-size: 22px;
   }
-  
+
   .invitation-section {
     padding: 25px 20px;
   }
-  
+
   .invitation-translate-btn {
     width: 32px;
     height: 32px;
@@ -2178,8 +2229,8 @@ body.slide .oliven-nav-toggle {
 }
 
 .organization .oliven-title-meta {
-  color: #BD945A;
-  font-family: 'Nunito Sans', sans-serif;
+  color: #bd945a;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2213,8 +2264,7 @@ body.slide .oliven-nav-toggle {
 
 .ceremony-item:hover {
   transform: translateY(-10px);
-  box-shadow: 
-    0 20px 60px rgba(189, 148, 90, 0.25),
+  box-shadow: 0 20px 60px rgba(189, 148, 90, 0.25),
     0 5px 20px rgba(0, 0, 0, 0.1);
   border-color: rgba(189, 148, 90, 0.4);
 }
@@ -2256,7 +2306,7 @@ body.slide .oliven-nav-toggle {
   right: -3px;
   bottom: -3px;
   border-radius: 15px;
-  background: linear-gradient(45deg, #BD945A, #f4d9a8, #BD945A, #f4d9a8);
+  background: linear-gradient(45deg, #bd945a, #f4d9a8, #bd945a, #f4d9a8);
   background-size: 300% 300%;
   z-index: -1;
   opacity: 0;
@@ -2265,7 +2315,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes gradientMove {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -2298,12 +2349,12 @@ body.slide .oliven-nav-toggle {
 
 .ceremony-number {
   font-size: 52px;
-  color: #BD945A;
+  color: #bd945a;
   margin: 0;
   font-weight: 700;
   line-height: 1;
   transition: all 0.4s ease;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   text-shadow: 2px 2px 4px rgba(189, 148, 90, 0.15);
 }
 
@@ -2320,7 +2371,7 @@ body.slide .oliven-nav-toggle {
   border-radius: 50%;
   background: linear-gradient(135deg, #fff, #fafafa);
   border: 2px solid rgba(189, 148, 90, 0.25);
-  color: #BD945A;
+  color: #bd945a;
   font-size: 18px;
   font-weight: 700;
   display: flex;
@@ -2333,8 +2384,8 @@ body.slide .oliven-nav-toggle {
 }
 
 .translate-btn-icon:hover {
-  background: linear-gradient(135deg, #BD945A, #f4d9a8);
-  border-color: #BD945A;
+  background: linear-gradient(135deg, #bd945a, #f4d9a8);
+  border-color: #bd945a;
   color: #fff;
   transform: translateY(-3px) rotate(10deg);
   box-shadow: 0 6px 20px rgba(189, 148, 90, 0.4);
@@ -2347,7 +2398,7 @@ body.slide .oliven-nav-toggle {
 /* Title */
 .ceremony-title {
   font-size: 26px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   color: #333;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -2357,14 +2408,14 @@ body.slide .oliven-nav-toggle {
 }
 
 .ceremony-item:hover .ceremony-title {
-  color: #BD945A;
+  color: #bd945a;
 }
 
 /* Elegant animated underline */
 .title-underline {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #BD945A, #f4d9a8);
+  background: linear-gradient(90deg, #bd945a, #f4d9a8);
   margin-bottom: 18px;
   border-radius: 3px;
   transition: width 0.4s ease;
@@ -2376,7 +2427,7 @@ body.slide .oliven-nav-toggle {
 
 /* Description */
 .ceremony-description {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #555;
@@ -2389,32 +2440,32 @@ body.slide .oliven-nav-toggle {
   .ceremony-item:nth-child(even) {
     flex-direction: column;
   }
-  
+
   .ceremony-image-wrapper {
     width: 100%;
     max-width: 400px;
     height: 300px;
   }
-  
+
   .ceremony-text {
     width: 100%;
   }
-  
+
   /* KEEP HEADER LAYOUT - number left, icon right */
   .ceremony-header {
     justify-content: space-between;
     width: 100%;
   }
-  
+
   .ceremony-title {
     text-align: left;
   }
-  
+
   .title-underline {
     margin-left: 0;
     margin-right: auto;
   }
-  
+
   .ceremony-description {
     text-align: left;
   }
@@ -2424,27 +2475,27 @@ body.slide .oliven-nav-toggle {
   .ceremonies-list {
     gap: 30px;
   }
-  
+
   .ceremony-item {
     padding: 25px;
   }
-  
+
   .ceremony-image-wrapper {
     height: 250px;
   }
-  
+
   .ceremony-number {
     font-size: 44px;
   }
-  
+
   .ceremony-title {
     font-size: 22px;
   }
-  
+
   .ceremony-description {
     font-size: 15px;
   }
-  
+
   .translate-btn-icon {
     width: 38px;
     height: 38px;
@@ -2456,29 +2507,29 @@ body.slide .oliven-nav-toggle {
   .ceremony-item {
     padding: 20px;
   }
-  
+
   .ceremony-image-wrapper {
     height: 220px;
   }
-  
+
   .ceremony-number {
     font-size: 38px;
   }
-  
+
   .ceremony-title {
     font-size: 20px;
   }
-  
+
   .ceremony-description {
     font-size: 14px;
   }
-  
+
   .translate-btn-icon {
     width: 36px;
     height: 36px;
     font-size: 15px;
   }
-}/* ===== Where Section - Clean & Elegant ===== */
+} /* ===== Where Section - Clean & Elegant ===== */
 .whenwhere {
   background: linear-gradient(135deg, #fffaf7 0%, #fff 50%, #fff5f0 100%);
   position: relative;
@@ -2525,7 +2576,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes floatAround {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
   25% {
@@ -2541,10 +2593,10 @@ body.slide .oliven-nav-toggle {
 
 /* Section Header */
 .section-subtitle {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #BD945A;
+  color: #bd945a;
   text-transform: uppercase;
   letter-spacing: 4px;
   display: block;
@@ -2552,7 +2604,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .section-title {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 65px;
   color: #333;
   margin-bottom: 25px;
@@ -2570,23 +2622,32 @@ body.slide .oliven-nav-toggle {
 .divider-line {
   width: 100px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #BD945A, transparent);
+  background: linear-gradient(90deg, transparent, #bd945a, transparent);
 }
 
 .divider-icon {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 22px;
   animation: heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  10%, 30% { transform: scale(1.2); }
-  20%, 40% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(1.2);
+  }
+  20%,
+  40% {
+    transform: scale(1.1);
+  }
 }
 
 .section-description {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   color: #666;
   font-style: italic;
@@ -2599,8 +2660,7 @@ body.slide .oliven-nav-toggle {
   background: #fff;
   border-radius: 30px;
   overflow: hidden;
-  box-shadow: 
-    0 15px 60px rgba(189, 148, 90, 0.15),
+  box-shadow: 0 15px 60px rgba(189, 148, 90, 0.15),
     0 5px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -2608,8 +2668,7 @@ body.slide .oliven-nav-toggle {
 
 .location-card:hover {
   transform: translateY(-15px);
-  box-shadow: 
-    0 30px 80px rgba(189, 148, 90, 0.25),
+  box-shadow: 0 30px 80px rgba(189, 148, 90, 0.25),
     0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -2645,7 +2704,7 @@ body.slide .oliven-nav-toggle {
   left: -3px;
   right: -3px;
   bottom: -3px;
-  background: linear-gradient(45deg, #BD945A, #f4d9a8, #BD945A, #f4d9a8);
+  background: linear-gradient(45deg, #bd945a, #f4d9a8, #bd945a, #f4d9a8);
   background-size: 300% 300%;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -2654,8 +2713,13 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes gradientMove {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .location-map-wrapper:hover .map-border-glow {
@@ -2670,8 +2734,8 @@ body.slide .oliven-nav-toggle {
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    135deg, 
-    rgba(189, 148, 90, 0.85) 0%, 
+    135deg,
+    rgba(189, 148, 90, 0.85) 0%,
     rgba(0, 0, 0, 0.7) 100%
   );
   display: flex;
@@ -2693,7 +2757,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .click-hint {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -2727,8 +2791,7 @@ body.slide .oliven-nav-toggle {
   background: #fff;
   border-radius: 50%;
   padding: 15px;
-  box-shadow: 
-    0 10px 40px rgba(189, 148, 90, 0.3),
+  box-shadow: 0 10px 40px rgba(189, 148, 90, 0.3),
     inset 0 0 20px rgba(189, 148, 90, 0.05);
   display: flex;
   align-items: center;
@@ -2740,8 +2803,7 @@ body.slide .oliven-nav-toggle {
 
 .location-card:hover .logo-circle {
   transform: rotate(360deg) scale(1.1);
-  box-shadow: 
-    0 15px 50px rgba(189, 148, 90, 0.5),
+  box-shadow: 0 15px 50px rgba(189, 148, 90, 0.5),
     inset 0 0 30px rgba(189, 148, 90, 0.1);
 }
 
@@ -2758,14 +2820,19 @@ body.slide .oliven-nav-toggle {
   transform: translate(-50%, -50%);
   width: 140%;
   height: 140%;
-  background: radial-gradient(circle, rgba(189, 148, 90, 0.3) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(189, 148, 90, 0.3) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   animation: glowPulse 2s infinite;
   z-index: 1;
 }
 
 @keyframes glowPulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
     transform: translate(-50%, -50%) scale(1);
   }
@@ -2777,7 +2844,7 @@ body.slide .oliven-nav-toggle {
 
 /* Venue Name */
 .venue-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 700;
   color: #333;
@@ -2786,7 +2853,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .location-card:hover .venue-name {
-  color: #BD945A;
+  color: #bd945a;
   transform: scale(1.05);
 }
 
@@ -2803,12 +2870,12 @@ body.slide .oliven-nav-toggle {
 .divider-line-right {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #BD945A);
+  background: linear-gradient(90deg, transparent, #bd945a);
   transition: width 0.4s ease;
 }
 
 .divider-line-right {
-  background: linear-gradient(90deg, #BD945A, transparent);
+  background: linear-gradient(90deg, #bd945a, transparent);
 }
 
 .location-card:hover .divider-line-left,
@@ -2817,7 +2884,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .divider-dot {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 18px;
   animation: heartbeat 1.5s infinite;
 }
@@ -2830,15 +2897,23 @@ body.slide .oliven-nav-toggle {
   gap: 15px;
   margin: 30px 0;
   padding: 25px;
-  background: linear-gradient(135deg, rgba(189, 148, 90, 0.05), rgba(189, 148, 90, 0.02));
+  background: linear-gradient(
+    135deg,
+    rgba(189, 148, 90, 0.05),
+    rgba(189, 148, 90, 0.02)
+  );
   border-radius: 15px;
-  border-left: 4px solid #BD945A;
+  border-left: 4px solid #bd945a;
   transition: all 0.3s ease;
 }
 
 .address-section:hover {
   transform: translateX(5px);
-  background: linear-gradient(135deg, rgba(189, 148, 90, 0.08), rgba(189, 148, 90, 0.03));
+  background: linear-gradient(
+    135deg,
+    rgba(189, 148, 90, 0.08),
+    rgba(189, 148, 90, 0.03)
+  );
   box-shadow: 0 5px 20px rgba(189, 148, 90, 0.15);
 }
 
@@ -2846,7 +2921,7 @@ body.slide .oliven-nav-toggle {
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #BD945A, #f4d9a8);
+  background: linear-gradient(135deg, #bd945a, #f4d9a8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2855,8 +2930,13 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes iconPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 .address-icon i {
@@ -2865,7 +2945,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .venue-address {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 1.8;
   color: #666;
@@ -2879,11 +2959,11 @@ body.slide .oliven-nav-toggle {
   align-items: center;
   gap: 12px;
   padding: 18px 40px;
-  background: linear-gradient(135deg, #BD945A 0%, #a67f4a 100%);
+  background: linear-gradient(135deg, #bd945a 0%, #a67f4a 100%);
   color: #fff;
   border: none;
   border-radius: 50px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2897,13 +2977,18 @@ body.slide .oliven-nav-toggle {
 }
 
 .location-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.6s ease;
 }
 
@@ -2914,7 +2999,7 @@ body.slide .oliven-nav-toggle {
 .location-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 50px rgba(189, 148, 90, 0.5);
-  background: linear-gradient(135deg, #a67f4a 0%, #BD945A 100%);
+  background: linear-gradient(135deg, #a67f4a 0%, #bd945a 100%);
 }
 
 .btn-icon {
@@ -2950,7 +3035,7 @@ body.slide .oliven-nav-toggle {
   .section-title {
     font-size: 50px;
   }
-  
+
   .location-map-wrapper {
     height: 300px;
   }
@@ -2960,26 +3045,26 @@ body.slide .oliven-nav-toggle {
   .section-title {
     font-size: 42px;
   }
-  
+
   .location-content {
     padding: 40px 30px;
   }
-  
+
   .venue-logo-wrapper {
     width: 100px;
     height: 100px;
     margin: -70px auto 25px;
   }
-  
+
   .logo-circle {
     width: 100px;
     height: 100px;
   }
-  
+
   .venue-name {
     font-size: 30px;
   }
-  
+
   .location-btn {
     padding: 16px 35px;
     font-size: 14px;
@@ -2990,29 +3075,28 @@ body.slide .oliven-nav-toggle {
   .section-title {
     font-size: 36px;
   }
-  
+
   .location-map-wrapper {
     height: 250px;
   }
-  
+
   .location-content {
     padding: 35px 25px;
   }
-  
+
   .venue-name {
     font-size: 26px;
   }
-  
+
   .venue-address {
     font-size: 14px;
   }
-  
+
   .location-btn {
     padding: 14px 30px;
     font-size: 13px;
   }
 }
-
 
 /* ===== Beautiful Footer Style ===== */
 .footer2 {
@@ -3028,7 +3112,11 @@ body.slide .oliven-nav-toggle {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle, rgba(189, 148, 90, 0.05) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(189, 148, 90, 0.05) 1px,
+    transparent 1px
+  );
   background-size: 30px 30px;
   opacity: 0.3;
   pointer-events: none;
@@ -3070,7 +3158,7 @@ body.slide .oliven-nav-toggle {
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #BD945A;
+  border: 4px solid #bd945a;
   padding: 8px;
   background: #fff;
   transition: all 0.4s ease;
@@ -3079,13 +3167,17 @@ body.slide .oliven-nav-toggle {
 }
 
 .logo-circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(transparent, rgba(189, 148, 90, 0.3), transparent 30%);
+  background: conic-gradient(
+    transparent,
+    rgba(189, 148, 90, 0.3),
+    transparent 30%
+  );
   animation: rotate 4s linear infinite;
 }
 
@@ -3127,7 +3219,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .couple-name {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 48px;
   color: #fff;
   display: inline-block;
@@ -3136,12 +3228,12 @@ body.slide .oliven-nav-toggle {
 }
 
 .couple-name:hover {
-  color: #BD945A;
+  color: #bd945a;
   transform: translateY(-3px);
 }
 
 .footer-tagline {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   font-style: italic;
@@ -3149,17 +3241,15 @@ body.slide .oliven-nav-toggle {
   letter-spacing: 1px;
 }
 
- .wedding-date-wrapper {
-    padding: 6px 12px !important;
-    gap: 8px !important;
-  }
-
-
+.wedding-date-wrapper {
+  padding: 6px 12px !important;
+  gap: 8px !important;
+}
 
 .date-icon {
-    width: 24px !important;
-    height: 24px !important;
-  }
+  width: 24px !important;
+  height: 24px !important;
+}
 
 .date-icon i {
   color: #fff;
@@ -3167,10 +3257,10 @@ body.slide .oliven-nav-toggle {
 }
 
 .wedding-dates {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 22px;
   font-weight: 600;
-  color: #BD945A;
+  color: #bd945a;
   margin: 0;
   letter-spacing: 1px;
 }
@@ -3201,7 +3291,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -3210,7 +3301,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .copyright {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
@@ -3223,9 +3314,8 @@ body.slide .oliven-nav-toggle {
   letter-spacing: 1px;
 }
 
-
 /* ==== Preloader ==== */
-.preloader{
+.preloader {
   width: 100%;
   height: 100%;
   background: #fff;
@@ -3251,7 +3341,7 @@ body.slide .oliven-nav-toggle {
   position: absolute;
   width: 26px;
   height: 26px;
-  background: #BD945A;
+  background: #bd945a;
   animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .lds-heart div:after,
@@ -3261,7 +3351,7 @@ body.slide .oliven-nav-toggle {
   display: block;
   width: 26px;
   height: 26px;
-  background: #BD945A;
+  background: #bd945a;
 }
 .lds-heart div:before {
   left: -17px;
@@ -3292,13 +3382,12 @@ body.slide .oliven-nav-toggle {
   }
 }
 
-
 /* ==== Media Query ==== */
 @media screen and (max-width: 1200px) {
   #oliven-aside {
     width: 30%;
   }
-  
+
   #oliven-main {
     width: 70%;
     margin-left: 30%;
@@ -3411,7 +3500,7 @@ body.slide .oliven-nav-toggle {
     width: 100%;
     margin-left: 0;
   }
-  
+
   /* Sidebar Mobile - FULL SCREEN */
   #oliven-aside {
     width: 100%; /* CHANGED from 320px to 100% */
@@ -3427,7 +3516,7 @@ body.slide .oliven-nav-toggle {
     background: linear-gradient(135deg, #fdfbf9 0%, #f8f5f2 100%);
     padding-bottom: 0;
   }
-  
+
   body.slide #oliven-aside {
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
@@ -3436,107 +3525,107 @@ body.slide .oliven-nav-toggle {
     transform: translateX(0);
     z-index: 1000;
   }
-  
+
   .sidebar-content {
-    padding: 30px 20px 40px; 
+    padding: 30px 20px 40px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
-  
+
   .logo-wrapper {
     width: 90px;
     height: 90px;
     margin-bottom: 20px;
   }
-  
+
   .couple-names {
     font-size: 32px;
     margin-bottom: 12px;
   }
-  
+
   .ampersand {
     font-size: 20px;
   }
-  
+
   .wedding-dates {
     font-size: 12px;
     margin-bottom: 30px;
   }
-  
+
   .date-divider {
     margin: 15px 0;
   }
-  
+
   .divider-heart {
-    color: #BD945A !important;
+    color: #bd945a !important;
   }
-  
+
   #oliven-aside .oliven-main-menu {
     flex: 1;
     margin: 20px 0;
   }
-  
+
   #oliven-aside .oliven-main-menu ul {
     text-align: left;
   }
-  
+
   .menu-item {
     margin-bottom: 5px;
   }
-  
+
   .menu-item a {
     font-size: 17px;
     padding: 14px 18px;
   }
-  
+
   .menu-icon {
     width: 32px;
     font-size: 17px;
   }
-  
+
   #oliven-aside .footer1 {
     padding-top: 30px;
     margin-top: auto;
     border-top: 1px solid rgba(189, 148, 90, 0.2);
     padding-bottom: 40px;
   }
-  
+
   .footer-text {
     font-size: 13px;
     line-height: 1.6;
   }
-  
+
   .footer-text strong {
     font-size: 14px;
   }
-  
+
   .footer-heart i {
-    color: #BD945A !important;
+    color: #bd945a !important;
   }
-  
+
   #oliven-aside::-webkit-scrollbar {
     width: 6px !important;
   }
-  
+
   #oliven-aside::-webkit-scrollbar-track {
     background: transparent;
   }
-  
+
   #oliven-aside::-webkit-scrollbar-thumb {
     background: rgba(189, 148, 90, 0.3);
     border-radius: 10px;
   }
-  
+
   #oliven-aside::-webkit-scrollbar-thumb:hover {
     background: rgba(189, 148, 90, 0.5);
   }
-  
+
   /* OVERLAY - NO LONGER NEEDED BUT KEPT FOR BACKUP */
   .sidebar-overlay {
     display: none !important; /* DISABLED - not needed for fullscreen */
   }
-  
+
   .oliven-nav-toggle {
     position: fixed;
     left: 0px;
@@ -3552,294 +3641,294 @@ body.slide .oliven-nav-toggle {
     box-shadow: none;
     transition: all 0.3s ease;
   }
-  
+
   .oliven-nav-toggle:hover {
     transform: scale(1.1);
   }
-  
+
   .oliven-nav-toggle i {
-    background: #BD945A;
+    background: #bd945a;
     height: 2px;
   }
-  
+
   .oliven-nav-toggle i::before,
   .oliven-nav-toggle i::after {
-    background: #BD945A;
+    background: #bd945a;
     height: 2px;
   }
-  
+
   .oliven-nav-toggle.active i {
     background: transparent;
   }
-  
+
   .oliven-nav-toggle.active i::before {
     top: 0;
     -webkit-transform: rotateZ(45deg);
     transform: rotateZ(45deg);
-    background: #BD945A;
+    background: #bd945a;
   }
-  
+
   .oliven-nav-toggle.active i::after {
     bottom: 0;
     -webkit-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
-    background: #BD945A;
+    background: #bd945a;
   }
-  
+
   /* Header Mobile */
   .header .container {
     padding-top: 40px;
   }
-  
+
   .hero-content {
     margin-top: 40px;
   }
-  
+
   .header {
     padding-bottom: 80px;
   }
-  
+
   .hero-names {
     font-size: 60px;
     line-height: 1.1;
   }
-  
+
   .hero-subtitle {
     font-size: 19px;
     margin-bottom: 35px;
   }
-  
+
   .hero-content {
     padding: 35px 20px;
   }
-  
+
   .event-cards {
     grid-template-columns: 1fr;
     gap: 20px;
     margin: 30px 0;
   }
-  
+
   .event-card-inner {
     min-height: auto;
     padding: 30px 20px;
   }
-  
+
   .event-icon {
     width: 60px;
     height: 60px;
   }
-  
+
   .event-icon i {
     font-size: 28px;
   }
-  
+
   .event-title {
     font-size: 20px;
   }
-  
+
   .event-date {
     font-size: 18px;
   }
-  
+
   .event-time {
     font-size: 15px;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     gap: 15px;
     margin-top: 30px;
   }
-  
+
   .hero-btn {
     width: 100%;
     justify-content: center;
     padding: 16px 35px;
     font-size: 14px;
   }
-  
+
   .divider-line-left,
   .divider-line-right {
     width: 60px;
   }
-  
+
   .divider-heart {
     font-size: 20px;
-    color: #BD945A !important;
+    color: #bd945a !important;
   }
-  
+
   .scroll-indicator {
     bottom: 20px;
   }
-  
+
   .scroll-text {
     font-size: 10px;
     letter-spacing: 2px;
   }
-  
+
   .scroll-icon {
     width: 40px;
     height: 40px;
   }
-  
+
   .scroll-icon i {
     font-size: 18px;
   }
-  
+
   /* Countdown Mobile */
   .countdown-title {
     font-size: 40px;
   }
-  
+
   .countdown-wrapper {
     gap: 15px;
   }
-  
+
   .countdown-circle {
     width: 100px;
     height: 100px;
   }
-  
+
   .countdown-number {
     font-size: 32px;
   }
-  
+
   .countdown-label {
     font-size: 12px;
   }
-  
+
   .countdown-separator {
     display: none;
   }
-  
+
   .celebration-title {
     font-size: 50px;
   }
-  
+
   .celebration-icon i {
     font-size: 60px;
   }
-  
+
   /* Story Mobile */
   .story-subtitle {
     font-size: 28px;
   }
-  
+
   .story-text p {
     font-size: 15px;
   }
-  
+
   .invitation-heading {
     font-size: 22px;
   }
-  
+
   .invitation-text {
     padding: 20px;
   }
-  
+
   .quote-icon {
     font-size: 60px;
     top: 10px;
     left: -10px;
   }
-  
+
   /* Ceremonies Mobile */
   .ceremony-item,
   .ceremony-item:nth-child(even) {
     flex-direction: column;
     padding: 20px;
   }
-  
+
   .ceremony-image-wrapper {
     width: 100%;
     height: 220px;
   }
-  
+
   .ceremony-number {
     font-size: 36px;
   }
-  
+
   .ceremony-title {
     font-size: 20px;
   }
-  
+
   .ceremony-description {
     font-size: 15px;
   }
-  
+
   /* Location Mobile */
   .location-map-wrapper {
     height: 250px;
   }
-  
+
   .venue-name {
     font-size: 24px;
   }
-  
+
   .venue-address {
     font-size: 15px;
   }
-  
+
   .location-btn {
     padding: 12px 30px;
     font-size: 13px;
     width: 100%;
     justify-content: center;
   }
-  
+
   .location-content {
     padding: 25px;
   }
-  
+
   .venue-icon {
     width: 80px;
     height: 80px;
   }
-  
+
   /* Footer Mobile */
   .footer2 {
     padding: 50px 20px 30px;
   }
-  
+
   .logo-circle {
     width: 90px;
     height: 90px;
   }
-  
+
   .couple-name {
     font-size: 36px;
   }
-  
+
   .ampersand {
     font-size: 24px;
   }
-  
+
   .footer-tagline {
     font-size: 14px;
   }
-  
+
   .wedding-date-wrapper {
     padding: 10px 20px;
     font-size: 16px;
   }
-  
+
   .date-icon {
     width: 30px;
     height: 30px;
   }
-  
+
   .date-icon i {
     font-size: 16px;
   }
-  
+
   .wedding-dates {
     font-size: 16px;
   }
-  
+
   .divider-line {
     width: 50px;
   }
-  
+
   .copyright {
     font-size: 12px;
   }
@@ -3850,45 +3939,45 @@ body.slide .oliven-nav-toggle {
     width: 100%;
     max-width: 100%;
   }
-  
+
   .sidebar-content {
     padding: 25px 15px;
   }
-  
+
   .logo-wrapper {
     width: 80px;
     height: 80px;
   }
-  
+
   .couple-names {
     font-size: 28px;
   }
-  
+
   .menu-item a {
     font-size: 16px;
     padding: 12px 15px;
   }
-  
+
   .hero-names {
     font-size: 48px;
   }
-  
+
   .hero-subtitle {
     font-size: 16px;
   }
-  
+
   .hero-content {
     padding: 25px 15px;
   }
-  
+
   .event-card-inner {
     padding: 25px 15px;
   }
-  
+
   .wedding-date-wrapper {
     padding: 8px 15px;
   }
-  
+
   .wedding-dates {
     font-size: 14px;
   }
@@ -3901,7 +3990,7 @@ body.slide .oliven-nav-toggle {
   right: 30px;
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, #BD945A, #a67f4a);
+  background: linear-gradient(135deg, #bd945a, #a67f4a);
   border: none;
   border-radius: 50%;
   color: #fff !important;
@@ -3914,7 +4003,7 @@ body.slide .oliven-nav-toggle {
   align-items: center;
   justify-content: center;
   overflow: visible;
-  
+
   /* Mobile touch optimizations */
   -webkit-tap-highlight-color: rgba(189, 148, 90, 0.3);
   -webkit-touch-callout: none;
@@ -4001,7 +4090,8 @@ body.slide .oliven-nav-toggle {
 }
 
 @keyframes wave-animation {
-  0%, 100% {
+  0%,
+  100% {
     height: 8px;
   }
   50% {
@@ -4011,7 +4101,7 @@ body.slide .oliven-nav-toggle {
 
 /* Ripple effect */
 .music-control.playing::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4045,11 +4135,11 @@ body.slide .oliven-nav-toggle {
     bottom: 85px; /* Move above navigation if you have bottom nav */
     right: 20px;
   }
-  
+
   .music-control i {
     font-size: 26px !important;
   }
-  
+
   .music-control.paused i.fa-play {
     font-size: 28px !important;
   }
@@ -4063,11 +4153,11 @@ body.slide .oliven-nav-toggle {
     bottom: 80px;
     right: 15px;
   }
-  
+
   .music-control i {
     font-size: 24px !important;
   }
-  
+
   .music-control.paused i.fa-play {
     font-size: 26px !important;
   }
@@ -4089,13 +4179,11 @@ body.slide .oliven-nav-toggle {
 }
 
 .name-text {
-  font-family: 'Alex Brush', cursive;
-  font-size: 90px;
+  font-family: "Alex Brush", cursive;
+  font-size: 75px;
   color: #fff;
   margin: 0 0 20px 0;
-  text-shadow: 
-    3px 3px 10px rgba(0, 0, 0, 0.8),
-    0 0 30px rgba(189, 148, 90, 0.5);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(189, 148, 90, 0.5);
   letter-spacing: 3px;
   line-height: 1;
 }
@@ -4107,16 +4195,16 @@ body.slide .oliven-nav-toggle {
 }
 
 .ampersand-large {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 70px;
-  color: #BD945A;
+  color: #bd945a;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
 }
 
 .parent-label {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 12px;
-  color: #BD945A;
+  color: #bd945a;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin: 15px 0 8px 0;
@@ -4125,7 +4213,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .parent-names {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 18px;
   color: #fff;
   font-weight: 500;
@@ -4139,11 +4227,11 @@ body.slide .oliven-nav-toggle {
   .name-text {
     font-size: 70px;
   }
-  
+
   .ampersand-large {
     font-size: 55px;
   }
-  
+
   .parent-names {
     font-size: 16px;
   }
@@ -4156,30 +4244,30 @@ body.slide .oliven-nav-toggle {
     gap: 30px;
     align-items: center;
   }
-  
+
   .bride-section,
   .groom-section {
     max-width: 100%;
   }
-  
+
   .name-text {
     font-size: 60px;
   }
-  
+
   .ampersand-wrapper {
     padding-top: 0;
     margin: 10px 0;
   }
-  
+
   .ampersand-large {
     font-size: 48px;
   }
-  
+
   .parent-label {
     font-size: 11px;
     margin: 12px 0 6px 0;
   }
-  
+
   .parent-names {
     font-size: 15px;
   }
@@ -4190,11 +4278,11 @@ body.slide .oliven-nav-toggle {
   .name-text {
     font-size: 48px;
   }
-  
+
   .ampersand-large {
     font-size: 40px;
   }
-  
+
   .parent-names {
     font-size: 14px;
   }
@@ -4219,31 +4307,27 @@ body.slide .oliven-nav-toggle {
 
 .om-symbol {
   font-size: 20px;
-  color: #BD945A;
+  color: #bd945a;
   display: block;
   margin-bottom: 1px;
-  text-shadow: 
-    0 0 20px rgba(233, 143, 18, 0.6),
-    3px 3px 10px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 20px rgba(233, 143, 18, 0.6), 3px 3px 10px rgba(0, 0, 0, 0.8);
   animation: glow 5s ease-in-out infinite;
 }
 
 @keyframes glow {
-  0%, 100% {
-    text-shadow: 
-      0 0 20px rgba(189, 148, 90, 0.6),
+  0%,
+  100% {
+    text-shadow: 0 0 20px rgba(189, 148, 90, 0.6),
       3px 3px 10px rgba(0, 0, 0, 0.8);
   }
   50% {
-    text-shadow: 
-      0 0 30px rgba(189, 148, 90, 0.9),
-      0 0 40px rgba(189, 148, 90, 0.5),
-      3px 3px 10px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 30px rgba(189, 148, 90, 0.9),
+      0 0 40px rgba(189, 148, 90, 0.5), 3px 3px 10px rgba(0, 0, 0, 0.8);
   }
 }
 
 .chant-text {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 24px;
   color: #fff;
   font-weight: 500;
@@ -4258,11 +4342,11 @@ body.slide .oliven-nav-toggle {
   .sacred-chant {
     margin-bottom: 5px;
   }
-  
+
   .om-symbol {
     font-size: 10px;
   }
-  
+
   .chant-text {
     font-size: 20px;
     letter-spacing: 2px;
@@ -4273,7 +4357,7 @@ body.slide .oliven-nav-toggle {
   .om-symbol {
     font-size: 12px;
   }
-  
+
   .chant-text {
     font-size: 18px;
   }
@@ -4287,7 +4371,7 @@ body.slide .oliven-nav-toggle {
 .invite-line-1,
 .invite-line-2,
 .invite-line-3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   color: #fff;
   margin: 0;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
@@ -4310,7 +4394,7 @@ body.slide .oliven-nav-toggle {
 .invite-line-3 {
   font-size: 26px;
   font-weight: 600;
-  color: #BD945A;
+  color: #bd945a;
   margin-bottom: 10px;
 }
 
@@ -4319,15 +4403,15 @@ body.slide .oliven-nav-toggle {
   .invitation-message {
     margin-bottom: 30px;
   }
-  
+
   .invite-line-1 {
     font-size: 15px;
   }
-  
+
   .invite-line-2 {
     font-size: 18px;
   }
-  
+
   .invite-line-3 {
     font-size: 22px;
   }
@@ -4337,11 +4421,11 @@ body.slide .oliven-nav-toggle {
   .invite-line-1 {
     font-size: 14px;
   }
-  
+
   .invite-line-2 {
     font-size: 16px;
   }
-  
+
   .invite-line-3 {
     font-size: 20px;
   }
@@ -4369,7 +4453,7 @@ body.slide .oliven-nav-toggle {
 }
 
 .floating-heart {
-  color: #BD945A;
+  color: #bd945a;
 }
 
 .floating-ring {
@@ -4469,7 +4553,8 @@ body.slide .oliven-nav-toggle {
 
 /* Float animation */
 @keyframes floatElement {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) translateX(0) rotate(0deg) scale(1);
   }
   25% {
@@ -4491,11 +4576,11 @@ body.slide .oliven-nav-toggle {
     opacity: 0.08;
     font-size: 28px;
   }
-  
+
   .floating-ring {
     font-size: 24px;
   }
-  
+
   .floating-flower {
     font-size: 26px;
   }
@@ -4526,7 +4611,7 @@ body:hover .floating-flower {
 
 .calendar-icon-badge i {
   font-size: 18px;
-  color: #BD945A;
+  color: #bd945a;
 }
 
 .event-card:hover .calendar-icon-badge {
@@ -4540,9 +4625,9 @@ body:hover .floating-flower {
   bottom: -35px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 12px;
-  color: #BD945A;
+  color: #bd945a;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -4578,7 +4663,7 @@ body:hover .floating-flower {
 
 /* Add ripple effect on click */
 .event-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4603,11 +4688,11 @@ body:hover .floating-flower {
     top: 10px;
     right: 10px;
   }
-  
+
   .calendar-icon-badge i {
     font-size: 16px;
   }
-  
+
   .add-calendar-hint {
     font-size: 11px;
   }
@@ -4620,10 +4705,10 @@ body:hover .floating-flower {
 
 /* Section Header */
 .section-subtitle {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #BD945A;
+  color: #bd945a;
   text-transform: uppercase;
   letter-spacing: 4px;
   display: block;
@@ -4631,7 +4716,7 @@ body:hover .floating-flower {
 }
 
 .section-title {
-  font-family: 'Alex Brush', cursive;
+  font-family: "Alex Brush", cursive;
   font-size: 65px;
   color: #333;
   margin-bottom: 25px;
@@ -4649,23 +4734,32 @@ body:hover .floating-flower {
 .divider-line {
   width: 100px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #BD945A, transparent);
+  background: linear-gradient(90deg, transparent, #bd945a, transparent);
 }
 
 .divider-icon {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 22px;
   animation: heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  10%, 30% { transform: scale(1.2); }
-  20%, 40% { transform: scale(1.1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(1.2);
+  }
+  20%,
+  40% {
+    transform: scale(1.1);
+  }
 }
 
 .section-description {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   color: #666;
   font-style: italic;
@@ -4678,17 +4772,15 @@ body:hover .floating-flower {
   background: #fff;
   border-radius: 30px;
   padding: 50px 40px;
-  box-shadow: 
-    0 15px 60px rgba(189, 148, 90, 0.15),
+  box-shadow: 0 15px 60px rgba(189, 148, 90, 0.15),
     0 5px 20px rgba(0, 0, 0, 0.08);
-  border-left: 5px solid #BD945A;
+  border-left: 5px solid #bd945a;
   transition: all 0.4s ease;
 }
 
 .rsvp-card:hover {
   transform: translateY(-10px);
-  box-shadow: 
-    0 30px 80px rgba(189, 148, 90, 0.25),
+  box-shadow: 0 30px 80px rgba(189, 148, 90, 0.25),
     0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
@@ -4703,7 +4795,7 @@ body:hover .floating-flower {
 }
 
 .form-label {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 18px;
   font-weight: 600;
   color: #333;
@@ -4712,7 +4804,7 @@ body:hover .floating-flower {
 }
 
 .required {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 16px;
 }
 
@@ -4726,7 +4818,7 @@ body:hover .floating-flower {
   position: absolute;
   left: 18px;
   font-size: 18px;
-  color: #BD945A;
+  color: #bd945a;
   transition: all 0.3s ease;
   z-index: 2;
 }
@@ -4734,7 +4826,7 @@ body:hover .floating-flower {
 .form-input {
   width: 100%;
   padding: 16px 20px 16px 50px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 15px;
   color: #333;
   background: #fff;
@@ -4745,7 +4837,7 @@ body:hover .floating-flower {
 }
 
 .form-input:focus {
-  border-color: #BD945A;
+  border-color: #bd945a;
   box-shadow: 0 5px 20px rgba(189, 148, 90, 0.15);
   transform: translateY(-2px);
 }
@@ -4784,7 +4876,7 @@ body:hover .floating-flower {
 /* Error Message */
 .error-message {
   display: block;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   color: #dc3545;
   margin-top: 8px;
@@ -4793,9 +4885,16 @@ body:hover .floating-flower {
 }
 
 @keyframes errorShake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
 }
 
 /* Submit Section */
@@ -4809,11 +4908,11 @@ body:hover .floating-flower {
   align-items: center;
   gap: 12px;
   padding: 18px 45px;
-  background: linear-gradient(135deg, #BD945A 0%, #a67f4a 100%);
+  background: linear-gradient(135deg, #bd945a 0%, #a67f4a 100%);
   color: #fff;
   border: none;
   border-radius: 50px;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -4826,13 +4925,18 @@ body:hover .floating-flower {
 }
 
 .rsvp-submit-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.6s ease;
 }
 
@@ -4843,7 +4947,7 @@ body:hover .floating-flower {
 .rsvp-submit-btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 50px rgba(189, 148, 90, 0.5);
-  background: linear-gradient(135deg, #a67f4a 0%, #BD945A 100%);
+  background: linear-gradient(135deg, #a67f4a 0%, #bd945a 100%);
 }
 
 .rsvp-submit-btn:disabled {
@@ -4880,11 +4984,13 @@ body:hover .floating-flower {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .submit-note {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 14px;
   color: #666;
   margin-top: 15px;
@@ -4895,7 +5001,7 @@ body:hover .floating-flower {
 }
 
 .submit-note i {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 16px;
 }
 
@@ -4904,16 +5010,16 @@ body:hover .floating-flower {
   .section-title {
     font-size: 50px;
   }
-  
+
   .rsvp-card {
     padding: 40px 30px;
   }
-  
+
   .form-input {
     padding: 14px 18px 14px 45px;
     font-size: 14px;
   }
-  
+
   .rsvp-submit-btn {
     padding: 16px 40px;
     font-size: 14px;
@@ -4924,15 +5030,15 @@ body:hover .floating-flower {
   .section-title {
     font-size: 42px;
   }
-  
+
   .rsvp-card {
     padding: 30px 20px;
   }
-  
+
   .form-label {
     font-size: 16px;
   }
-  
+
   .rsvp-submit-btn {
     padding: 14px 35px;
     font-size: 13px;
@@ -4959,7 +5065,7 @@ body:hover .floating-flower {
 .success-icon {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #BD945A, #f4d9a8);
+  background: linear-gradient(135deg, #bd945a, #f4d9a8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -4969,7 +5075,8 @@ body:hover .floating-flower {
 }
 
 @keyframes successPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 10px 40px rgba(189, 148, 90, 0.3);
   }
@@ -4985,14 +5092,14 @@ body:hover .floating-flower {
 }
 
 .success-message h3 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 32px;
-  color: #BD945A;
+  color: #bd945a;
   margin-bottom: 15px;
 }
 
 .success-message p {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: #666;
   margin: 10px 0;
@@ -5057,7 +5164,8 @@ body:hover .floating-flower {
 }
 
 @keyframes floatElement {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
   25% {
@@ -5073,10 +5181,10 @@ body:hover .floating-flower {
 
 /* Gallery Header */
 .gallery-subtitle {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: #BD945A;
+  color: #bd945a;
   text-transform: uppercase;
   letter-spacing: 4px;
   display: block;
@@ -5094,23 +5202,32 @@ body:hover .floating-flower {
 .divider-line {
   width: 120px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #BD945A, transparent);
+  background: linear-gradient(90deg, transparent, #bd945a, transparent);
 }
 
 .divider-icon {
-  color: #BD945A;
+  color: #bd945a;
   font-size: 24px;
   animation: heartbeat 1.5s infinite;
 }
 
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  10%, 30% { transform: scale(1.3); }
-  20%, 40% { transform: scale(1.2); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(1.3);
+  }
+  20%,
+  40% {
+    transform: scale(1.2);
+  }
 }
 
 .gallery-description {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   color: #666;
   font-style: italic;
@@ -5145,16 +5262,14 @@ body:hover .floating-flower {
   position: relative;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.15),
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15),
     0 10px 30px rgba(189, 148, 90, 0.1);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   background: #fff;
 }
 
 .slider-item:hover .slider-image-wrapper {
-  box-shadow: 
-    0 30px 80px rgba(189, 148, 90, 0.3),
+  box-shadow: 0 30px 80px rgba(189, 148, 90, 0.3),
     0 15px 50px rgba(0, 0, 0, 0.2);
   transform: translateY(-10px);
 }
@@ -5212,7 +5327,8 @@ body:hover .floating-flower {
 }
 
 @keyframes iconPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -5222,11 +5338,11 @@ body:hover .floating-flower {
 
 .overlay-icon i {
   font-size: 30px;
-  color: #BD945A;
+  color: #bd945a;
 }
 
 .overlay-text {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -5242,7 +5358,7 @@ body:hover .floating-flower {
   transform: translateY(-50%);
   width: 55px;
   height: 55px;
-  background: linear-gradient(135deg, #BD945A, #f4d9a8);
+  background: linear-gradient(135deg, #bd945a, #f4d9a8);
   border: none;
   border-radius: 50%;
   color: #fff;
@@ -5259,7 +5375,7 @@ body:hover .floating-flower {
 .nav-button:hover {
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 15px 40px rgba(189, 148, 90, 0.6);
-  background: linear-gradient(135deg, #a67f4a, #BD945A);
+  background: linear-gradient(135deg, #a67f4a, #bd945a);
 }
 
 .nav-button:active {
@@ -5282,7 +5398,7 @@ body:hover .floating-flower {
 .engagement-swiper .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background: #BD945A;
+  background: #bd945a;
   opacity: 0.4;
   transition: all 0.3s ease;
 }
@@ -5291,7 +5407,7 @@ body:hover .floating-flower {
   opacity: 1;
   width: 30px;
   border-radius: 6px;
-  background: linear-gradient(90deg, #BD945A, #f4d9a8);
+  background: linear-gradient(90deg, #bd945a, #f4d9a8);
 }
 
 /* Lightbox Modal - No Caption */
@@ -5312,8 +5428,12 @@ body:hover .floating-flower {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .lightbox-close {
@@ -5335,7 +5455,7 @@ body:hover .floating-flower {
 }
 
 .lightbox-close:hover {
-  background: #BD945A;
+  background: #bd945a;
   transform: rotate(90deg) scale(1.1);
 }
 
@@ -5386,21 +5506,21 @@ body:hover .floating-flower {
   .section-padding-compact {
     padding: 50px 0 30px 0;
   }
-  
+
   .nav-button {
     width: 45px;
     height: 45px;
     font-size: 18px;
   }
-  
+
   .slider-image {
     height: 400px;
   }
-  
+
   .gallery-slider-wrapper {
     padding: 20px 0 30px;
   }
-  
+
   .engagement-swiper {
     padding: 30px 0 50px;
   }
@@ -5410,15 +5530,15 @@ body:hover .floating-flower {
   .section-padding-compact {
     padding: 40px 0 25px 0;
   }
-  
+
   .engagement-swiper .swiper-slide {
     width: 85%;
   }
-  
+
   .slider-image {
     height: 350px;
   }
-  
+
   .nav-button {
     display: none;
   }
@@ -5428,11 +5548,11 @@ body:hover .floating-flower {
   .section-padding-compact {
     padding: 35px 0 20px 0;
   }
-  
+
   .slider-image {
     height: 300px;
   }
-  
+
   .lightbox-close {
     top: 20px;
     right: 20px;
@@ -5451,7 +5571,7 @@ body:hover .floating-flower {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   border: 2px solid rgba(189, 148, 90, 0.4);
-  color: #BD945A;
+  color: #bd945a;
   font-size: 18px;
   font-weight: 700;
   display: flex;
@@ -5464,8 +5584,8 @@ body:hover .floating-flower {
 }
 
 .hero-translate-btn:hover {
-  background: linear-gradient(135deg, #BD945A, #f4d9a8);
-  border-color: #BD945A;
+  background: linear-gradient(135deg, #bd945a, #f4d9a8);
+  border-color: #bd945a;
   color: #fff;
   transform: rotate(360deg) scale(1.1);
   box-shadow: 0 6px 20px rgba(189, 148, 90, 0.5);

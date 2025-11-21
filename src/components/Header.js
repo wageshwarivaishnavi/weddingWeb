@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-function Header () {
-  const [isInvitationTamil, setIsInvitationTamil] = useState(false);
-  
+function Header() {
+  const [isInvitationHindi, setIsInvitationHindi] = useState(false);
+
   const scrollToLocation = (e) => {
     e.preventDefault();
-    const locationSection = document.getElementById('whenwhere');
+    const locationSection = document.getElementById("whenwhere");
     if (locationSection) {
-      locationSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      locationSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -17,43 +17,30 @@ function Header () {
   // Add to Calendar functions
   const addToCalendar = (eventType) => {
     let title, startDate, endDate, details, location;
-    
-    if (eventType === 'reception') {
-      title = 'Varsha & Vikas - Wedding Reception';
-      startDate = '20260304T180000';
-      endDate = '20260304T230000';
-      details = 'Join us for the wedding reception of Varsha and Vikas';
-      location = 'Vysya Hall, M56Q+6H5, Military Rd, Ammapet, Salem, Tamil Nadu 636003';
-    } else {
-      title = 'Varsha & Vikas - Marriage Ceremony';
-      startDate = '20260305T110000';
-      endDate = '20260305T120000';
-      details = 'Join us for the wedding ceremony of Varsha and Vikas';
-      location = 'Vysya Hall, M56Q+6H5, Military Rd, Ammapet, Salem, Tamil Nadu 636003';
-    }
+    title = "Wageshwari & Rishab - Marriage Ceremony";
+    startDate = "20260219T110000";
+    endDate = "20260220T120000";
+    details = "Join us for the wedding ceremony of Wageshwari and Rishab";
+    location =
+      "Fly Over Bridge of, Railway Station, Near, Sudarshan Path, Patna Sahib, Nalapar, Kali Asthan, Patna, Bihar 800008";
 
-    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
-    
-    window.open(googleCalendarUrl, '_blank');
+    const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+      title
+    )}&dates=${startDate}/${endDate}&details=${encodeURIComponent(
+      details
+    )}&location=${encodeURIComponent(location)}`;
+
+    window.open(googleCalendarUrl, "_blank");
   };
 
   const downloadICS = (eventType) => {
     let title, startDate, endDate, details, location;
-    
-    if (eventType === 'reception') {
-      title = 'Varsha & Vikas - Wedding Reception';
-      startDate = '20260304T180000';
-      endDate = '20260304T230000';
-      details = 'Join us for the wedding reception of Varsha and Vikas';
-      location = 'Vysya Hall, M56Q+6H5, Military Rd, Ammapet, Salem, Tamil Nadu 636003';
-    } else {
-      title = 'Varsha & Vikas - Marriage Ceremony';
-      startDate = '20260305T110000';
-      endDate = '20260305T120000';
-      details = 'Join us for the wedding ceremony of Varsha and Vikas';
-      location = 'Vysya Hall, M56Q+6H5, Military Rd, Ammapet, Salem, Tamil Nadu 636003';
-    }
-
+    title = "Wageshwari & Rishab - Marriage Ceremony";
+    startDate = "20260305T110000";
+    endDate = "20260305T120000";
+    details = "Join us for the wedding ceremony of Wageshwari and Rishab";
+    location =
+      "Fly Over Bridge of, Railway Station, Near, Sudarshan Path, Patna Sahib, Nalapar, Kali Asthan, Patna, Bihar 800008";
     const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
@@ -67,17 +54,23 @@ SEQUENCE:0
 END:VEVENT
 END:VCALENDAR`;
 
-    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-    const link = document.createElement('a');
+    const blob = new Blob([icsContent], {
+      type: "text/calendar;charset=utf-8",
+    });
+    const link = document.createElement("a");
     link.href = window.URL.createObjectURL(blob);
-    link.download = `${eventType}-varsha-vikas.ics`;
+    link.download = `${eventType}-Wageshwari-Rishab.ics`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handleEventCardClick = (eventType) => {
-    if (window.confirm('Add to Calendar?\n\nClick OK for Google Calendar\nClick Cancel to download for Apple/Outlook')) {
+    if (
+      window.confirm(
+        "Add to Calendar?\n\nClick OK for Google Calendar\nClick Cancel to download for Apple/Outlook"
+      )
+    ) {
       addToCalendar(eventType);
     } else {
       downloadICS(eventType);
@@ -85,168 +78,175 @@ END:VCALENDAR`;
   };
 
   return (
-    <header
-      id='home'
-      className='header valign bg-img parallaxie'
-    >
-      <div className='hero-overlay'></div>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-md-12 text-center caption'>
+    <header id="home" className="header valign bg-img parallaxie">
+      <div className="hero-overlay"></div>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 text-center caption">
             {/* Om Namah Shivaya - Top */}
-            <div className='sacred-chant animate-box' data-animate-effect='fadeInDown'>
-              <span className='om-symbol'>ॐ नमः शिवाय</span>
+            <div
+              className="sacred-chant animate-box"
+              data-animate-effect="fadeInDown"
+            >
+              <span className="om-symbol">ॐ नमः शिवाय</span>
             </div>
-            
-            <div className='hero-content'>
+
+            <div className="hero-content">
               {/* Translate Button */}
-              <button 
-                className='hero-translate-btn'
-                onClick={() => setIsInvitationTamil(!isInvitationTamil)}
-                title={isInvitationTamil ? 'Switch to English' : 'Switch to Tamil'}
+              <button
+                className="hero-translate-btn"
+                onClick={() => setIsInvitationHindi(!isInvitationHindi)}
+                title={
+                  isInvitationHindi ? "Switch to English" : "Switch to Hindi"
+                }
               >
-                {isInvitationTamil ? 'A' : 'அ'}
+                {isInvitationHindi ? "A" : "अ"}
               </button>
-              
+
               {/* Invitation Message */}
-              <div className='invitation-message animate-box' data-animate-effect='fadeInUp'>
-                {isInvitationTamil ? (
+              <div
+                className="invitation-message animate-box"
+                data-animate-effect="fadeInUp"
+              >
+                {isInvitationHindi ? (
                   <>
-                    <p className='invite-line-2'>எங்கள் திருமண விழாவை கொண்டாட</p>
-                    <p className='invite-line-3'>உங்களை அன்புடன் அழைக்கிறோம்</p>
+                    <p className="invite-line-2">
+                      हमारे विवाह समारोह का जश्न मनाने के लिए
+                    </p>
+                    <p className="invite-line-3">
+                      आपको स्नेहपूर्वक आमंत्रित करते हैं
+                    </p>
                   </>
                 ) : (
                   <>
-                    <p className='invite-line-2'>We cordially invite you to celebrate</p>
-                    <p className='invite-line-3'>The wedding of</p>
+                    <p className="invite-line-2">
+                      We cordially invite you to celebrate
+                    </p>
+                    <p className="invite-line-3">The wedding of</p>
                   </>
                 )}
               </div>
 
               {/* Names and Parents Layout */}
-              <div className='names-section'>
+              <div className="names-section">
                 {/* Bride Section */}
-                <div className='bride-section'>
-                  <h1 className='name-text animate-box' data-animate-effect='fadeInUp'>
-                    {isInvitationTamil ? 'வர்ஷா' : 'Varsha'}
+                <div className="bride-section">
+                  <h1
+                    className="name-text animate-box"
+                    data-animate-effect="fadeInUp"
+                  >
+                    {isInvitationHindi ? "वागेश्वरी" : "Wageshwari"}
                   </h1>
-                  {isInvitationTamil ? (
+                  {isInvitationHindi ? (
                     <>
-                      <p className='parent-label'>மகள்</p>
-                      <p className='parent-names'>திரு. கே. ரவி & திருமதி. கிருத்திகா ரவி</p>
+                      <p className="parent-label">कन्या</p>
+                      <p className="parent-names">
+                        स्व. अनिल कुमार और श्रीमती रजनी गुप्ता
+                      </p>
                     </>
                   ) : (
                     <>
-                      <p className='parent-label'>DAUGHTER OF</p>
-                      <p className='parent-names'>Mr. K. Ravi & Mrs. Krithika Ravi</p>
+                      <p className="parent-label">DAUGHTER OF</p>
+                      <p className="parent-names">
+                        Late Anil Kumar & Mrs. Rajani Gupta
+                      </p>
                     </>
                   )}
                 </div>
 
                 {/* Ampersand */}
-                <div className='ampersand-wrapper'>
-                  <span className='ampersand-large'>&</span>
+                <div className="ampersand-wrapper">
+                  <span className="ampersand-large">&</span>
                 </div>
 
                 {/* Groom Section */}
-                <div className='groom-section'>
-                  <h1 className='name-text animate-box' data-animate-effect='fadeInUp'>
-                    {isInvitationTamil ? 'விகாஸ்' : 'Vikas'}
+                <div className="groom-section">
+                  <h1
+                    className="name-text animate-box"
+                    data-animate-effect="fadeInUp"
+                  >
+                    {isInvitationHindi ? "रिशाब" : "Rishab"}
                   </h1>
-                  {isInvitationTamil ? (
+                  {isInvitationHindi ? (
                     <>
-                      <p className='parent-label'>மகன்</p>
-                      <p className='parent-names'>திரு. என். கல்யாண் & திருமதி. காயத்ரி கல்யாண்</p>
+                      <p className="parent-label">पुत्र</p>
+                      <p className="parent-names">
+                        श्री रंजीत कुमार रंजन और श्रीमती रेखा देवी
+                      </p>
                     </>
                   ) : (
                     <>
-                      <p className='parent-label'>SON OF</p>
-                      <p className='parent-names'>Mr. N. Kalyan & Mrs. Gayathri Kalyan</p>
+                      <p className="parent-label">SON OF</p>
+                      <p className="parent-names">
+                        Mr. Ranjit Kumar Ranjan & Mrs. Rekha Devi
+                      </p>
                     </>
                   )}
                 </div>
               </div>
 
               {/* Elegant divider */}
-              <div className='hero-divider'>
-                <span className='divider-line-left'></span>
-                <span className='divider-icon'>♥</span>
-                <span className='divider-line-right'></span>
+              <div className="hero-divider">
+                <span className="divider-line-left"></span>
+                <span className="divider-icon">♥</span>
+                <span className="divider-line-right"></span>
               </div>
-            
+
               {/* Subtitle */}
-              <p className='hero-subtitle animate-box' data-animate-effect='fadeInUp'>
-                {isInvitationTamil 
-                  ? 'இன்று முதல் என்றென்றும் ஒன்றாக'
-                  : 'Together Forever, From This Day'
-                }
+              <p
+                className="hero-subtitle animate-box"
+                data-animate-effect="fadeInUp"
+              >
+                {isInvitationHindi
+                  ? "आज से हमेशा के लिए एक साथ"
+                  : "Together Forever, From This Day"}
               </p>
 
               {/* Event details cards - CLICKABLE */}
-              <div className='event-cards'>
-                <div 
-                  className='event-card animate-box' 
-                  data-animate-effect='fadeInUp'
-                  onClick={() => handleEventCardClick('reception')}
-                  role='button'
-                  tabIndex='0'
-                  onKeyPress={(e) => e.key === 'Enter' && handleEventCardClick('reception')}
+              <div className="event-cards">
+                <div
+                  className="event-card animate-box"
+                  data-animate-effect="fadeInUp"
+                  onClick={() => handleEventCardClick("ceremony")}
+                  role="button"
+                  tabIndex="0"
+                  onKeyPress={(e) =>
+                    e.key === "Enter" && handleEventCardClick("ceremony")
+                  }
                 >
-                  <div className='event-card-inner'>
-                    <div className='calendar-icon-badge'>
-                      <i className='ti-calendar'></i>
+                  <div className="event-card-inner">
+                    <div className="calendar-icon-badge">
+                      <i className="ti-calendar"></i>
                     </div>
-                    <h3 className='event-title'>
-                      {isInvitationTamil ? 'வரவேற்பு விழா' : 'Reception'}
+                    <h3 className="event-title">
+                      {isInvitationHindi ? "विवाह समारोह" : "Marriage Ceremony"}
                     </h3>
-                    <div className='event-date'>
-                      {isInvitationTamil ? 'மார்ச் 04, 2026' : 'March 04, 2026'}
+                    <div className="event-date">
+                      {isInvitationHindi ? "05 मार्च, 2026" : "Feb 19, 2026"}
                     </div>
-                    <div className='event-time'>
-                      {isInvitationTamil ? 'மாலை 6:00 முதல்' : '6:00 PM onwards'}
+                    <div className="event-time">
+                      {isInvitationHindi
+                        ? "सुबह 10:30 - 12:00"
+                        : "07:00 PM Onwards"}
                     </div>
-                    <div className='add-calendar-hint'>
-                      <i className='ti-plus'></i> {isInvitationTamil ? 'காலண்டரில் சேர்க்க' : 'Add to Calendar'}
-                    </div>
-                  </div>
-                </div>
-
-                <div 
-                  className='event-card animate-box' 
-                  data-animate-effect='fadeInUp'
-                  onClick={() => handleEventCardClick('ceremony')}
-                  role='button'
-                  tabIndex='0'
-                  onKeyPress={(e) => e.key === 'Enter' && handleEventCardClick('ceremony')}
-                >
-                  <div className='event-card-inner'>
-                    <div className='calendar-icon-badge'>
-                      <i className='ti-calendar'></i>
-                    </div>
-                    <h3 className='event-title'>
-                      {isInvitationTamil ? 'திருமண விழா' : 'Marriage Ceremony'}
-                    </h3>
-                    <div className='event-date'>
-                      {isInvitationTamil ? 'மார்ச் 05, 2026' : 'March 05, 2026'}
-                    </div>
-                    <div className='event-time'>
-                      {isInvitationTamil ? 'காலை 10:30 - 12:00' : '10:30 AM - 12:00 PM'}
-                    </div>
-                    <div className='add-calendar-hint'>
-                      <i className='ti-plus'></i> {isInvitationTamil ? 'காலண்டரில் சேர்க்க' : 'Add to Calendar'}
+                    <div className="add-calendar-hint">
+                      <i className="ti-plus"></i>{" "}
+                      {isInvitationHindi
+                        ? "कैलेंडर में जोड़ें"
+                        : "Add to Calendar"}
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Buttons */}
-              <div className='hero-buttons'>
-                <button 
+              <div className="hero-buttons">
+                <button
                   onClick={scrollToLocation}
-                  className='btn-primary hero-btn'
+                  className="btn-primary hero-btn"
                 >
-                  <i className='ti-location-pin'></i>
-                  {isInvitationTamil ? 'இடத்தைப் பார்க்க' : 'View Location'}
+                  <i className="ti-location-pin"></i>
+                  {isInvitationHindi ? "स्थान देखें" : "View Location"}
                 </button>
               </div>
             </div>
@@ -254,7 +254,7 @@ END:VCALENDAR`;
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
