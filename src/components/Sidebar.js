@@ -32,7 +32,12 @@ function Sidebar() {
           <div className="oliven-logo">
             <a href="/">
               <div className="logo-wrapper">
-                <img src={Logo} alt="Wedding Logo" loading="lazy" />
+                <img
+                  src={Logo}
+                  alt="Wedding Logo"
+                  loading="lazy"
+                  className="rotated-logo"
+                />
               </div>
               <span className="couple-names">
                 Wageshwari <small className="ampersand">&</small> Rishab

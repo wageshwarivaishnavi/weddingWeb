@@ -12,7 +12,12 @@ function Footer() {
               <div className="footer-logo">
                 <a href="/">
                   <div className="logo-circle">
-                    <img src={Logo} alt="Wageshwari & Rishab Wedding" loading="lazy" />
+                    <img
+                      src={Logo}
+                      alt="Wageshwari & Rishab Wedding"
+                      loading="lazy"
+                      className="rotated-logo"
+                    />
                   </div>
                 </a>
               </div>
