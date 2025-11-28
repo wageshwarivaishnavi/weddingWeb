@@ -165,7 +165,7 @@ END:VCALENDAR`;
                     className="name-text animate-box"
                     data-animate-effect="fadeInUp"
                   >
-                    {isInvitationHindi ? "रिशाब" : "Rishab"}
+                    {isInvitationHindi ? "ऋषभ" : "Rishab"}
                   </h1>
                   {isInvitationHindi ? (
                     <>
