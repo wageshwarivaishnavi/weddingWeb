@@ -16,7 +16,6 @@ function Footer() {
                       src={Logo}
                       alt="Wageshwari & Rishab Wedding"
                       loading="lazy"
-                      className="rotated-logo"
                     />
                   </div>
                 </a>

@@ -749,13 +749,6 @@ body.slide .oliven-nav-toggle {
   opacity: 120;
 }
 
-/* Rotate logo images anticlockwise once (useful when image file orientation is wrong) */
-.rotated-logo {
-  display: inline-block;
-  transform: rotate(-90deg);
-  transform-origin: center center;
-}
-
 .hero-overlay {
   position: absolute;
   top: 0;
